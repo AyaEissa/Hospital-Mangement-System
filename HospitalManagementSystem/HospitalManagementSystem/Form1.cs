@@ -16,5 +16,18 @@ namespace HospitalManagementSystem
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Equals("") || textBox2.Text.Equals("") || textBox3.Text.Equals("") || textBox4.Text.Equals("") || textBox5.Text.Equals("") )
+            {
+                MessageBox.Show("Please Fill All the fields");
+            }
+        }
     }
 }
