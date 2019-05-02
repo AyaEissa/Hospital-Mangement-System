@@ -1,13 +1,15 @@
 DROP TABLE Patient CASCADE CONSTRAINTS;
 DROP TABLE Doctor CASCADE CONSTRAINTS;
+DROP TABLE Nurse CASCADE CONSTRAINTS;
 
 create table Patient
 (
+Username VARCHAR2(30) PRIMARY KEY,
+Password_ varchar2(256) NOT NULL,
 Namee varchar2 (40) NOT NULL,
-National_ID NUMBER(20) PRIMARY KEY,
+National_ID NUMBER(20) NOT NULL,
 age NUMBER(3) NOT NULL,
-Mobile_number varchar2(13) NOT NULL,
-Passwordd varchar2(256) NOT NULL
+Mobile_number varchar2(13) NOT NULL
 );
 
 CREATE TABLE Doctor (
@@ -17,5 +19,13 @@ Fname VARCHAR2(10),
 Lname VARCHAR2(10),
 Mobilenumber VARCHAR2(13),
 Department VARCHAR2(30)
+);
+
+CREATE TABLE Nurse (
+Username VARCHAR2(30) PRIMARY KEY,
+Password_ VARCHAR2(256) NOT NULL,
+Fname VARCHAR2(10),
+Lname VARCHAR2(10),
+Mobilenumber VARCHAR2(13),
 );
 
