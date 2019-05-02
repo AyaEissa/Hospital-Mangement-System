@@ -26,6 +26,6 @@ Username VARCHAR2(30) PRIMARY KEY,
 Password_ VARCHAR2(256) NOT NULL,
 Fname VARCHAR2(10),
 Lname VARCHAR2(10),
-Mobilenumber VARCHAR2(13),
+Mobilenumber VARCHAR2(13)
 );
 
