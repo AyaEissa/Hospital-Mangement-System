@@ -46,11 +46,10 @@ namespace HospitalManagementSystem
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
             cmd.CommandText = "SELECT Username, Password_ ";
-            if (loginAs == "Doctor")
-            {
-                cmd.CommandText += "FROM Doctor " +
-                    "WHERE Username = :username";
-            }
+
+            cmd.CommandText += "FROM " + loginAs +
+                " WHERE Username = :username";
+
             cmd.Parameters.Add("username", username);
             OracleDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -75,11 +74,10 @@ namespace HospitalManagementSystem
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
             cmd.CommandText = "SELECT Username, Password_ ";
-            if (cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString() == "Doctor")
-            {
-                cmd.CommandText += "FROM Doctor " +
-                    "WHERE Username = :username";
-            }
+
+            cmd.CommandText += "FROM " + cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString() +
+                " WHERE Username = :username";
+
             cmd.Parameters.Add("username", txt_username.Text);
             OracleDataReader dr = cmd.ExecuteReader();
             if (dr.Read())

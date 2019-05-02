@@ -31,19 +31,33 @@ namespace HospitalManagementSystem
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
-            cmd.CommandText = "INSERT INTO Doctor " +
-                "VALUES (:username, :password, :fname, :lname, :mobilenumber, :department)";
-            cmd.Parameters.Add("username", txt_username.Text);
-            cmd.Parameters.Add("password", Cryptography.Encrypt(txt_password.Text));
-            cmd.Parameters.Add("fname", txt_fname.Text);
-            cmd.Parameters.Add("lname", txt_lname.Text);
-            cmd.Parameters.Add("mobilenumber", txt_mobile.Text);
-            cmd.Parameters.Add("department", txt_department.Text);
+            if (cmb_registeras.Items[cmb_registeras.SelectedIndex].ToString() == "Doctor")
+            {
+                cmd.CommandText = "INSERT INTO Doctor " +
+                    "VALUES (:username, :password, :fname, :lname, :mobilenumber, :department)";
+                cmd.Parameters.Add("username", txt_username.Text);
+                cmd.Parameters.Add("password", Cryptography.Encrypt(txt_password.Text));
+                cmd.Parameters.Add("fname", txt_fname.Text);
+                cmd.Parameters.Add("lname", txt_lname.Text);
+                cmd.Parameters.Add("mobilenumber", txt_mobile.Text);
+                cmd.Parameters.Add("department", txt_department.Text);
+            }
+            else if (cmb_registeras.Items[cmb_registeras.SelectedIndex].ToString() == "Patient")
+            {
+                cmd.CommandText = "INSERT INTO Patient " +
+                    "VALUES (:username, :password, :name, :nationalid, :age, :mobilenumber)";
+                cmd.Parameters.Add("username", txt_patUsername.Text);
+                cmd.Parameters.Add("password", Cryptography.Encrypt(txt_patPassword.Text));
+                cmd.Parameters.Add("name", txt_patName.Text);
+                cmd.Parameters.Add("nationalid", txt_patNationalID.Text);
+                cmd.Parameters.Add("age", txt_patAge.Text);
+                cmd.Parameters.Add("mobilenumber", txt_patMobilenumber.Text);
+            }
 
             int row = cmd.ExecuteNonQuery();
             if (row != -1)
             {
-                DialogResult res = MessageBox.Show("Registraion Done Successfully.", "Information",
+                DialogResult res = MessageBox.Show("Registration Done Successfully.", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (res == DialogResult.OK)
                     this.Close();
@@ -65,11 +79,30 @@ namespace HospitalManagementSystem
 
         private void cmb_registeras_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmb_registeras.SelectedIndex == 0)
+            showRequiredPanel(cmb_registeras.Items[cmb_registeras.SelectedIndex].ToString());
+        }
+
+        private void showRequiredPanel(string registerAs)
+        {
+            if (registerAs == "Doctor")
+            {
+                pnl_patient.Visible = false;
                 pnl_doctor.Visible = true;
-            else
+                pnl_doctor.Dock = DockStyle.Fill;
+                txt_username.Focus();
+            }
+            else if (registerAs == "Patient")
+            {
                 pnl_doctor.Visible = false;
-            txt_username.Focus();
+                pnl_patient.Visible = true;
+                pnl_patient.Dock = DockStyle.Fill;
+                txt_patUsername.Focus();
+            }
+            else
+            {
+                pnl_doctor.Visible = false;
+                pnl_patient.Visible = false;
+            }
         }
     }
 }
