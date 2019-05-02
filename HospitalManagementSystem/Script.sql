@@ -4,10 +4,10 @@ DROP TABLE Doctor CASCADE CONSTRAINTS;
 create table Patient
 (
 Namee varchar2 (40) NOT NULL,
-National_ID varchar2 (20) NOT NULL,
-age varchar2(3) NOT NULL,
+National_ID NUMBER(20) PRIMARY KEY,
+age NUMBER(3) NOT NULL,
 Mobile_number varchar2(13) NOT NULL,
-Passwordd varchar2 (10)
+Passwordd varchar2(256) NOT NULL
 );
 
 CREATE TABLE Doctor (
