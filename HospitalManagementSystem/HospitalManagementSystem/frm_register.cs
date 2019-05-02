@@ -53,6 +53,16 @@ namespace HospitalManagementSystem
                 cmd.Parameters.Add("age", txt_patAge.Text);
                 cmd.Parameters.Add("mobilenumber", txt_patMobilenumber.Text);
             }
+            else if (cmb_registeras.Items[cmb_registeras.SelectedIndex].ToString() == "Nurse")
+            {
+                cmd.CommandText = "INSERT INTO Nurse " +
+                    "VALUES (:username, :password, :fname, :lname, :mobilenumber)";
+                cmd.Parameters.Add("username", txt_nurUsername.Text);
+                cmd.Parameters.Add("password", Cryptography.Encrypt(txt_nurPassword.Text));
+                cmd.Parameters.Add("fname", txt_nurFname.Text);
+                cmd.Parameters.Add("lname", txt_nurLname.Text);
+                cmd.Parameters.Add("mobilenumber", txt_nurMobile.Text);
+            }
 
             int row = cmd.ExecuteNonQuery();
             if (row != -1)
@@ -87,6 +97,7 @@ namespace HospitalManagementSystem
             if (registerAs == "Doctor")
             {
                 pnl_patient.Visible = false;
+                pnl_nurse.Visible = false;
                 pnl_doctor.Visible = true;
                 pnl_doctor.Dock = DockStyle.Fill;
                 txt_username.Focus();
@@ -94,14 +105,18 @@ namespace HospitalManagementSystem
             else if (registerAs == "Patient")
             {
                 pnl_doctor.Visible = false;
+                pnl_nurse.Visible = false;
                 pnl_patient.Visible = true;
                 pnl_patient.Dock = DockStyle.Fill;
                 txt_patUsername.Focus();
             }
-            else
+            else if (registerAs == "Nurse")
             {
                 pnl_doctor.Visible = false;
                 pnl_patient.Visible = false;
+                pnl_nurse.Visible = true;
+                pnl_nurse.Dock = DockStyle.Fill;
+                txt_nurUsername.Focus();
             }
         }
     }

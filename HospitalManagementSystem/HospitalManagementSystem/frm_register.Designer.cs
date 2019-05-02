@@ -62,12 +62,26 @@
             this.txt_patNationalID = new System.Windows.Forms.TextBox();
             this.txt_patAge = new System.Windows.Forms.TextBox();
             this.txt_patMobilenumber = new System.Windows.Forms.TextBox();
+            this.pnl_nurse = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_nurUsername = new System.Windows.Forms.Label();
+            this.lbl_nurPassword = new System.Windows.Forms.Label();
+            this.lbl_nurFname = new System.Windows.Forms.Label();
+            this.lbl_nurLname = new System.Windows.Forms.Label();
+            this.lbl_nurMobile = new System.Windows.Forms.Label();
+            this.txt_nurUsername = new System.Windows.Forms.TextBox();
+            this.txt_nurPassword = new System.Windows.Forms.TextBox();
+            this.txt_nurFname = new System.Windows.Forms.TextBox();
+            this.txt_nurLname = new System.Windows.Forms.TextBox();
+            this.txt_nurMobile = new System.Windows.Forms.TextBox();
             this.pnl_doctor.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnl_patient.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.pnl_nurse.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_registeras
@@ -489,11 +503,156 @@
             this.txt_patMobilenumber.Size = new System.Drawing.Size(228, 27);
             this.txt_patMobilenumber.TabIndex = 6;
             // 
+            // pnl_nurse
+            // 
+            this.pnl_nurse.Controls.Add(this.tableLayoutPanel5);
+            this.pnl_nurse.Location = new System.Drawing.Point(169, 160);
+            this.pnl_nurse.Name = "pnl_nurse";
+            this.pnl_nurse.Size = new System.Drawing.Size(468, 176);
+            this.pnl_nurse.TabIndex = 14;
+            this.pnl_nurse.Visible = false;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.lbl_nurUsername, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.lbl_nurPassword, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.lbl_nurFname, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.lbl_nurLname, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.lbl_nurMobile, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.txt_nurUsername, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.txt_nurPassword, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.txt_nurFname, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.txt_nurLname, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.txt_nurMobile, 0, 5);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 7;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.05263F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(468, 176);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // lbl_nurUsername
+            // 
+            this.lbl_nurUsername.AutoSize = true;
+            this.lbl_nurUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_nurUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nurUsername.Location = new System.Drawing.Point(3, 5);
+            this.lbl_nurUsername.Name = "lbl_nurUsername";
+            this.lbl_nurUsername.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurUsername.TabIndex = 6;
+            this.lbl_nurUsername.Text = "Username";
+            // 
+            // lbl_nurPassword
+            // 
+            this.lbl_nurPassword.AutoSize = true;
+            this.lbl_nurPassword.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_nurPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nurPassword.Location = new System.Drawing.Point(237, 5);
+            this.lbl_nurPassword.Name = "lbl_nurPassword";
+            this.lbl_nurPassword.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurPassword.TabIndex = 7;
+            this.lbl_nurPassword.Text = "Password";
+            // 
+            // lbl_nurFname
+            // 
+            this.lbl_nurFname.AutoSize = true;
+            this.lbl_nurFname.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_nurFname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nurFname.Location = new System.Drawing.Point(3, 51);
+            this.lbl_nurFname.Name = "lbl_nurFname";
+            this.lbl_nurFname.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurFname.TabIndex = 8;
+            this.lbl_nurFname.Text = "First Name";
+            // 
+            // lbl_nurLname
+            // 
+            this.lbl_nurLname.AutoSize = true;
+            this.lbl_nurLname.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_nurLname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nurLname.Location = new System.Drawing.Point(237, 51);
+            this.lbl_nurLname.Name = "lbl_nurLname";
+            this.lbl_nurLname.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurLname.TabIndex = 9;
+            this.lbl_nurLname.Text = "Last Name";
+            // 
+            // lbl_nurMobile
+            // 
+            this.lbl_nurMobile.AutoSize = true;
+            this.lbl_nurMobile.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_nurMobile.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nurMobile.Location = new System.Drawing.Point(3, 97);
+            this.lbl_nurMobile.Name = "lbl_nurMobile";
+            this.lbl_nurMobile.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurMobile.TabIndex = 10;
+            this.lbl_nurMobile.Text = "Mobile Number";
+            // 
+            // txt_nurUsername
+            // 
+            this.txt_nurUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_nurUsername.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_nurUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nurUsername.Location = new System.Drawing.Point(3, 26);
+            this.txt_nurUsername.Name = "txt_nurUsername";
+            this.txt_nurUsername.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurUsername.TabIndex = 1;
+            // 
+            // txt_nurPassword
+            // 
+            this.txt_nurPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_nurPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_nurPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nurPassword.Location = new System.Drawing.Point(237, 26);
+            this.txt_nurPassword.Name = "txt_nurPassword";
+            this.txt_nurPassword.PasswordChar = '●';
+            this.txt_nurPassword.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurPassword.TabIndex = 2;
+            // 
+            // txt_nurFname
+            // 
+            this.txt_nurFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_nurFname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_nurFname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nurFname.Location = new System.Drawing.Point(3, 72);
+            this.txt_nurFname.Name = "txt_nurFname";
+            this.txt_nurFname.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurFname.TabIndex = 3;
+            // 
+            // txt_nurLname
+            // 
+            this.txt_nurLname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_nurLname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_nurLname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nurLname.Location = new System.Drawing.Point(237, 72);
+            this.txt_nurLname.Name = "txt_nurLname";
+            this.txt_nurLname.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurLname.TabIndex = 4;
+            // 
+            // txt_nurMobile
+            // 
+            this.txt_nurMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_nurMobile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_nurMobile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nurMobile.Location = new System.Drawing.Point(3, 118);
+            this.txt_nurMobile.Name = "txt_nurMobile";
+            this.txt_nurMobile.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurMobile.TabIndex = 5;
+            // 
             // frm_register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 419);
+            this.Controls.Add(this.pnl_nurse);
             this.Controls.Add(this.pnl_patient);
             this.Controls.Add(this.pnl_doctor);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -511,6 +670,9 @@
             this.pnl_patient.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.pnl_nurse.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -550,5 +712,17 @@
         private System.Windows.Forms.TextBox txt_patNationalID;
         private System.Windows.Forms.TextBox txt_patAge;
         private System.Windows.Forms.TextBox txt_patMobilenumber;
+        private System.Windows.Forms.Panel pnl_nurse;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label lbl_nurUsername;
+        private System.Windows.Forms.Label lbl_nurPassword;
+        private System.Windows.Forms.Label lbl_nurFname;
+        private System.Windows.Forms.Label lbl_nurLname;
+        private System.Windows.Forms.Label lbl_nurMobile;
+        private System.Windows.Forms.TextBox txt_nurUsername;
+        private System.Windows.Forms.TextBox txt_nurPassword;
+        private System.Windows.Forms.TextBox txt_nurFname;
+        private System.Windows.Forms.TextBox txt_nurLname;
+        private System.Windows.Forms.TextBox txt_nurMobile;
     }
 }

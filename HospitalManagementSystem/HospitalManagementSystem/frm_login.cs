@@ -30,6 +30,8 @@ namespace HospitalManagementSystem
 
         private void cmb_loginas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            updateUsernameTextColor();
+
             txt_username.Focus();
         }
 
@@ -70,6 +72,11 @@ namespace HospitalManagementSystem
         }
 
         private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+            updateUsernameTextColor();
+        }
+
+        private void updateUsernameTextColor()
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
