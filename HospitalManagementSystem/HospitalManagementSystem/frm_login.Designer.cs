@@ -79,7 +79,7 @@
             this.btn_signin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_signin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_signin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_signin.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signin.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_signin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
             this.btn_signin.Location = new System.Drawing.Point(3, 310);
             this.btn_signin.Name = "btn_signin";
@@ -124,7 +124,7 @@
             this.btn_signup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_signup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_signup.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signup.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
             this.btn_signup.Location = new System.Drawing.Point(3, 345);
             this.btn_signup.Name = "btn_signup";
