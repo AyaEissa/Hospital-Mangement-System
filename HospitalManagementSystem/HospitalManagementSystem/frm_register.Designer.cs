@@ -32,8 +32,6 @@
             this.cmb_registeras = new System.Windows.Forms.ComboBox();
             this.pnl_doctor = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.lbl_username = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
             this.lbl_Fname = new System.Windows.Forms.Label();
@@ -46,6 +44,8 @@
             this.txt_lname = new System.Windows.Forms.TextBox();
             this.txt_mobile = new System.Windows.Forms.TextBox();
             this.txt_department = new System.Windows.Forms.TextBox();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_patient = new System.Windows.Forms.Panel();
@@ -89,9 +89,10 @@
             this.lbl_registeras.AutoSize = true;
             this.lbl_registeras.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_registeras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_registeras.Location = new System.Drawing.Point(3, 18);
+            this.lbl_registeras.Location = new System.Drawing.Point(4, 21);
+            this.lbl_registeras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_registeras.Name = "lbl_registeras";
-            this.lbl_registeras.Size = new System.Drawing.Size(656, 18);
+            this.lbl_registeras.Size = new System.Drawing.Size(875, 23);
             this.lbl_registeras.TabIndex = 8;
             this.lbl_registeras.Text = "Register As";
             // 
@@ -105,18 +106,20 @@
             "Doctor",
             "Patient",
             "Nurse"});
-            this.cmb_registeras.Location = new System.Drawing.Point(3, 39);
+            this.cmb_registeras.Location = new System.Drawing.Point(4, 48);
+            this.cmb_registeras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_registeras.Name = "cmb_registeras";
-            this.cmb_registeras.Size = new System.Drawing.Size(656, 29);
+            this.cmb_registeras.Size = new System.Drawing.Size(875, 31);
             this.cmb_registeras.TabIndex = 0;
             this.cmb_registeras.SelectedIndexChanged += new System.EventHandler(this.cmb_registeras_SelectedIndexChanged);
             // 
             // pnl_doctor
             // 
             this.pnl_doctor.Controls.Add(this.tableLayoutPanel3);
-            this.pnl_doctor.Location = new System.Drawing.Point(6, 78);
+            this.pnl_doctor.Location = new System.Drawing.Point(8, 96);
+            this.pnl_doctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_doctor.Name = "pnl_doctor";
-            this.pnl_doctor.Size = new System.Drawing.Size(468, 176);
+            this.pnl_doctor.Size = new System.Drawing.Size(624, 217);
             this.pnl_doctor.TabIndex = 10;
             this.pnl_doctor.Visible = false;
             // 
@@ -139,6 +142,7 @@
             this.tableLayoutPanel3.Controls.Add(this.txt_department, 1, 5);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 7;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
@@ -148,8 +152,147 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.05263F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(468, 176);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(624, 217);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_username.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.Location = new System.Drawing.Point(4, 5);
+            this.lbl_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(304, 23);
+            this.lbl_username.TabIndex = 6;
+            this.lbl_username.Text = "Username";
+            // 
+            // lbl_password
+            // 
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_password.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_password.Location = new System.Drawing.Point(316, 5);
+            this.lbl_password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(304, 23);
+            this.lbl_password.TabIndex = 7;
+            this.lbl_password.Text = "Password";
+            // 
+            // lbl_Fname
+            // 
+            this.lbl_Fname.AutoSize = true;
+            this.lbl_Fname.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_Fname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fname.Location = new System.Drawing.Point(4, 61);
+            this.lbl_Fname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Fname.Name = "lbl_Fname";
+            this.lbl_Fname.Size = new System.Drawing.Size(304, 23);
+            this.lbl_Fname.TabIndex = 8;
+            this.lbl_Fname.Text = "First Name";
+            // 
+            // lbl_Lname
+            // 
+            this.lbl_Lname.AutoSize = true;
+            this.lbl_Lname.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_Lname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Lname.Location = new System.Drawing.Point(316, 61);
+            this.lbl_Lname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Lname.Name = "lbl_Lname";
+            this.lbl_Lname.Size = new System.Drawing.Size(304, 23);
+            this.lbl_Lname.TabIndex = 9;
+            this.lbl_Lname.Text = "Last Name";
+            // 
+            // lbl_mobile
+            // 
+            this.lbl_mobile.AutoSize = true;
+            this.lbl_mobile.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_mobile.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mobile.Location = new System.Drawing.Point(4, 117);
+            this.lbl_mobile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_mobile.Name = "lbl_mobile";
+            this.lbl_mobile.Size = new System.Drawing.Size(304, 23);
+            this.lbl_mobile.TabIndex = 10;
+            this.lbl_mobile.Text = "Mobile Number";
+            // 
+            // lbl_department
+            // 
+            this.lbl_department.AutoSize = true;
+            this.lbl_department.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_department.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_department.Location = new System.Drawing.Point(316, 117);
+            this.lbl_department.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_department.Name = "lbl_department";
+            this.lbl_department.Size = new System.Drawing.Size(304, 23);
+            this.lbl_department.TabIndex = 11;
+            this.lbl_department.Text = "Department";
+            // 
+            // txt_username
+            // 
+            this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_username.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Location = new System.Drawing.Point(4, 32);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(304, 32);
+            this.txt_username.TabIndex = 1;
+            // 
+            // txt_password
+            // 
+            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_password.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Location = new System.Drawing.Point(316, 32);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '●';
+            this.txt_password.Size = new System.Drawing.Size(304, 32);
+            this.txt_password.TabIndex = 2;
+            // 
+            // txt_fname
+            // 
+            this.txt_fname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_fname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_fname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fname.Location = new System.Drawing.Point(4, 88);
+            this.txt_fname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_fname.Name = "txt_fname";
+            this.txt_fname.Size = new System.Drawing.Size(304, 32);
+            this.txt_fname.TabIndex = 3;
+            // 
+            // txt_lname
+            // 
+            this.txt_lname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_lname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_lname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lname.Location = new System.Drawing.Point(316, 88);
+            this.txt_lname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_lname.Name = "txt_lname";
+            this.txt_lname.Size = new System.Drawing.Size(304, 32);
+            this.txt_lname.TabIndex = 4;
+            // 
+            // txt_mobile
+            // 
+            this.txt_mobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_mobile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_mobile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mobile.Location = new System.Drawing.Point(4, 144);
+            this.txt_mobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_mobile.Name = "txt_mobile";
+            this.txt_mobile.Size = new System.Drawing.Size(304, 32);
+            this.txt_mobile.TabIndex = 5;
+            // 
+            // txt_department
+            // 
+            this.txt_department.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_department.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txt_department.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_department.Location = new System.Drawing.Point(316, 144);
+            this.txt_department.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_department.Name = "txt_department";
+            this.txt_department.Size = new System.Drawing.Size(304, 32);
+            this.txt_department.TabIndex = 6;
             // 
             // btn_save
             // 
@@ -157,9 +300,10 @@
             this.btn_save.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(3, 3);
+            this.btn_save.Location = new System.Drawing.Point(4, 4);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(325, 40);
+            this.btn_save.Size = new System.Drawing.Size(433, 49);
             this.btn_save.TabIndex = 7;
             this.btn_save.Text = "Confirm";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -171,140 +315,14 @@
             this.btn_cancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(334, 3);
+            this.btn_cancel.Location = new System.Drawing.Point(445, 4);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(325, 40);
+            this.btn_cancel.Size = new System.Drawing.Size(434, 49);
             this.btn_cancel.TabIndex = 8;
             this.btn_cancel.Text = "Discard";
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // lbl_username
-            // 
-            this.lbl_username.AutoSize = true;
-            this.lbl_username.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_username.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(3, 5);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(228, 18);
-            this.lbl_username.TabIndex = 6;
-            this.lbl_username.Text = "Username";
-            // 
-            // lbl_password
-            // 
-            this.lbl_password.AutoSize = true;
-            this.lbl_password.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_password.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_password.Location = new System.Drawing.Point(237, 5);
-            this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(228, 18);
-            this.lbl_password.TabIndex = 7;
-            this.lbl_password.Text = "Password";
-            // 
-            // lbl_Fname
-            // 
-            this.lbl_Fname.AutoSize = true;
-            this.lbl_Fname.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_Fname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Fname.Location = new System.Drawing.Point(3, 51);
-            this.lbl_Fname.Name = "lbl_Fname";
-            this.lbl_Fname.Size = new System.Drawing.Size(228, 18);
-            this.lbl_Fname.TabIndex = 8;
-            this.lbl_Fname.Text = "First Name";
-            // 
-            // lbl_Lname
-            // 
-            this.lbl_Lname.AutoSize = true;
-            this.lbl_Lname.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_Lname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Lname.Location = new System.Drawing.Point(237, 51);
-            this.lbl_Lname.Name = "lbl_Lname";
-            this.lbl_Lname.Size = new System.Drawing.Size(228, 18);
-            this.lbl_Lname.TabIndex = 9;
-            this.lbl_Lname.Text = "Last Name";
-            // 
-            // lbl_mobile
-            // 
-            this.lbl_mobile.AutoSize = true;
-            this.lbl_mobile.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_mobile.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mobile.Location = new System.Drawing.Point(3, 97);
-            this.lbl_mobile.Name = "lbl_mobile";
-            this.lbl_mobile.Size = new System.Drawing.Size(228, 18);
-            this.lbl_mobile.TabIndex = 10;
-            this.lbl_mobile.Text = "Mobile Number";
-            // 
-            // lbl_department
-            // 
-            this.lbl_department.AutoSize = true;
-            this.lbl_department.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_department.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_department.Location = new System.Drawing.Point(237, 97);
-            this.lbl_department.Name = "lbl_department";
-            this.lbl_department.Size = new System.Drawing.Size(228, 18);
-            this.lbl_department.TabIndex = 11;
-            this.lbl_department.Text = "Department";
-            // 
-            // txt_username
-            // 
-            this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_username.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.Location = new System.Drawing.Point(3, 26);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(228, 27);
-            this.txt_username.TabIndex = 1;
-            // 
-            // txt_password
-            // 
-            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_password.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.Location = new System.Drawing.Point(237, 26);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '●';
-            this.txt_password.Size = new System.Drawing.Size(228, 27);
-            this.txt_password.TabIndex = 2;
-            // 
-            // txt_fname
-            // 
-            this.txt_fname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_fname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_fname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fname.Location = new System.Drawing.Point(3, 72);
-            this.txt_fname.Name = "txt_fname";
-            this.txt_fname.Size = new System.Drawing.Size(228, 27);
-            this.txt_fname.TabIndex = 3;
-            // 
-            // txt_lname
-            // 
-            this.txt_lname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_lname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_lname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lname.Location = new System.Drawing.Point(237, 72);
-            this.txt_lname.Name = "txt_lname";
-            this.txt_lname.Size = new System.Drawing.Size(228, 27);
-            this.txt_lname.TabIndex = 4;
-            // 
-            // txt_mobile
-            // 
-            this.txt_mobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_mobile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_mobile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mobile.Location = new System.Drawing.Point(3, 118);
-            this.txt_mobile.Name = "txt_mobile";
-            this.txt_mobile.Size = new System.Drawing.Size(228, 27);
-            this.txt_mobile.TabIndex = 5;
-            // 
-            // txt_department
-            // 
-            this.txt_department.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_department.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txt_department.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_department.Location = new System.Drawing.Point(237, 118);
-            this.txt_department.Name = "txt_department";
-            this.txt_department.Size = new System.Drawing.Size(228, 27);
-            this.txt_department.TabIndex = 6;
             // 
             // tableLayoutPanel2
             // 
@@ -314,11 +332,12 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_save, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_cancel, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 373);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 459);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(662, 46);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(883, 57);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
             // tableLayoutPanel1
@@ -329,19 +348,21 @@
             this.tableLayoutPanel1.Controls.Add(this.cmb_registeras, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(662, 72);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(883, 89);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // pnl_patient
             // 
             this.pnl_patient.Controls.Add(this.tableLayoutPanel4);
-            this.pnl_patient.Location = new System.Drawing.Point(97, 121);
+            this.pnl_patient.Location = new System.Drawing.Point(129, 149);
+            this.pnl_patient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_patient.Name = "pnl_patient";
-            this.pnl_patient.Size = new System.Drawing.Size(468, 176);
+            this.pnl_patient.Size = new System.Drawing.Size(624, 217);
             this.pnl_patient.TabIndex = 13;
             this.pnl_patient.Visible = false;
             // 
@@ -364,6 +385,7 @@
             this.tableLayoutPanel4.Controls.Add(this.txt_patMobilenumber, 1, 5);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 7;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
@@ -373,7 +395,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.05263F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(468, 176);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(624, 217);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // lbl_patUsername
@@ -381,9 +403,10 @@
             this.lbl_patUsername.AutoSize = true;
             this.lbl_patUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_patUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_patUsername.Location = new System.Drawing.Point(3, 5);
+            this.lbl_patUsername.Location = new System.Drawing.Point(4, 5);
+            this.lbl_patUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_patUsername.Name = "lbl_patUsername";
-            this.lbl_patUsername.Size = new System.Drawing.Size(228, 18);
+            this.lbl_patUsername.Size = new System.Drawing.Size(304, 23);
             this.lbl_patUsername.TabIndex = 6;
             this.lbl_patUsername.Text = "Username";
             // 
@@ -392,9 +415,10 @@
             this.lbl_patPassword.AutoSize = true;
             this.lbl_patPassword.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_patPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_patPassword.Location = new System.Drawing.Point(237, 5);
+            this.lbl_patPassword.Location = new System.Drawing.Point(316, 5);
+            this.lbl_patPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_patPassword.Name = "lbl_patPassword";
-            this.lbl_patPassword.Size = new System.Drawing.Size(228, 18);
+            this.lbl_patPassword.Size = new System.Drawing.Size(304, 23);
             this.lbl_patPassword.TabIndex = 7;
             this.lbl_patPassword.Text = "Password";
             // 
@@ -403,9 +427,10 @@
             this.lbl_patName.AutoSize = true;
             this.lbl_patName.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_patName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_patName.Location = new System.Drawing.Point(3, 51);
+            this.lbl_patName.Location = new System.Drawing.Point(4, 61);
+            this.lbl_patName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_patName.Name = "lbl_patName";
-            this.lbl_patName.Size = new System.Drawing.Size(228, 18);
+            this.lbl_patName.Size = new System.Drawing.Size(304, 23);
             this.lbl_patName.TabIndex = 8;
             this.lbl_patName.Text = "Name";
             // 
@@ -414,9 +439,10 @@
             this.lbl_patNationalID.AutoSize = true;
             this.lbl_patNationalID.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_patNationalID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_patNationalID.Location = new System.Drawing.Point(237, 51);
+            this.lbl_patNationalID.Location = new System.Drawing.Point(316, 61);
+            this.lbl_patNationalID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_patNationalID.Name = "lbl_patNationalID";
-            this.lbl_patNationalID.Size = new System.Drawing.Size(228, 18);
+            this.lbl_patNationalID.Size = new System.Drawing.Size(304, 23);
             this.lbl_patNationalID.TabIndex = 9;
             this.lbl_patNationalID.Text = "National ID";
             // 
@@ -425,9 +451,10 @@
             this.lbl_patAge.AutoSize = true;
             this.lbl_patAge.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_patAge.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_patAge.Location = new System.Drawing.Point(3, 97);
+            this.lbl_patAge.Location = new System.Drawing.Point(4, 117);
+            this.lbl_patAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_patAge.Name = "lbl_patAge";
-            this.lbl_patAge.Size = new System.Drawing.Size(228, 18);
+            this.lbl_patAge.Size = new System.Drawing.Size(304, 23);
             this.lbl_patAge.TabIndex = 10;
             this.lbl_patAge.Text = "Age";
             // 
@@ -436,9 +463,10 @@
             this.lbl_patMobilenumber.AutoSize = true;
             this.lbl_patMobilenumber.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_patMobilenumber.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_patMobilenumber.Location = new System.Drawing.Point(237, 97);
+            this.lbl_patMobilenumber.Location = new System.Drawing.Point(316, 117);
+            this.lbl_patMobilenumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_patMobilenumber.Name = "lbl_patMobilenumber";
-            this.lbl_patMobilenumber.Size = new System.Drawing.Size(228, 18);
+            this.lbl_patMobilenumber.Size = new System.Drawing.Size(304, 23);
             this.lbl_patMobilenumber.TabIndex = 11;
             this.lbl_patMobilenumber.Text = "Mobile Number";
             // 
@@ -447,9 +475,10 @@
             this.txt_patUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_patUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_patUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patUsername.Location = new System.Drawing.Point(3, 26);
+            this.txt_patUsername.Location = new System.Drawing.Point(4, 32);
+            this.txt_patUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_patUsername.Name = "txt_patUsername";
-            this.txt_patUsername.Size = new System.Drawing.Size(228, 27);
+            this.txt_patUsername.Size = new System.Drawing.Size(304, 32);
             this.txt_patUsername.TabIndex = 1;
             // 
             // txt_patPassword
@@ -457,10 +486,11 @@
             this.txt_patPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_patPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_patPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patPassword.Location = new System.Drawing.Point(237, 26);
+            this.txt_patPassword.Location = new System.Drawing.Point(316, 32);
+            this.txt_patPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_patPassword.Name = "txt_patPassword";
             this.txt_patPassword.PasswordChar = '●';
-            this.txt_patPassword.Size = new System.Drawing.Size(228, 27);
+            this.txt_patPassword.Size = new System.Drawing.Size(304, 32);
             this.txt_patPassword.TabIndex = 2;
             // 
             // txt_patName
@@ -468,9 +498,10 @@
             this.txt_patName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_patName.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_patName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patName.Location = new System.Drawing.Point(3, 72);
+            this.txt_patName.Location = new System.Drawing.Point(4, 88);
+            this.txt_patName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_patName.Name = "txt_patName";
-            this.txt_patName.Size = new System.Drawing.Size(228, 27);
+            this.txt_patName.Size = new System.Drawing.Size(304, 32);
             this.txt_patName.TabIndex = 3;
             // 
             // txt_patNationalID
@@ -478,9 +509,10 @@
             this.txt_patNationalID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_patNationalID.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_patNationalID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patNationalID.Location = new System.Drawing.Point(237, 72);
+            this.txt_patNationalID.Location = new System.Drawing.Point(316, 88);
+            this.txt_patNationalID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_patNationalID.Name = "txt_patNationalID";
-            this.txt_patNationalID.Size = new System.Drawing.Size(228, 27);
+            this.txt_patNationalID.Size = new System.Drawing.Size(304, 32);
             this.txt_patNationalID.TabIndex = 4;
             // 
             // txt_patAge
@@ -488,9 +520,10 @@
             this.txt_patAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_patAge.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_patAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patAge.Location = new System.Drawing.Point(3, 118);
+            this.txt_patAge.Location = new System.Drawing.Point(4, 144);
+            this.txt_patAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_patAge.Name = "txt_patAge";
-            this.txt_patAge.Size = new System.Drawing.Size(228, 27);
+            this.txt_patAge.Size = new System.Drawing.Size(304, 32);
             this.txt_patAge.TabIndex = 5;
             // 
             // txt_patMobilenumber
@@ -498,17 +531,19 @@
             this.txt_patMobilenumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_patMobilenumber.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_patMobilenumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patMobilenumber.Location = new System.Drawing.Point(237, 118);
+            this.txt_patMobilenumber.Location = new System.Drawing.Point(316, 144);
+            this.txt_patMobilenumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_patMobilenumber.Name = "txt_patMobilenumber";
-            this.txt_patMobilenumber.Size = new System.Drawing.Size(228, 27);
+            this.txt_patMobilenumber.Size = new System.Drawing.Size(304, 32);
             this.txt_patMobilenumber.TabIndex = 6;
             // 
             // pnl_nurse
             // 
             this.pnl_nurse.Controls.Add(this.tableLayoutPanel5);
-            this.pnl_nurse.Location = new System.Drawing.Point(169, 160);
+            this.pnl_nurse.Location = new System.Drawing.Point(225, 197);
+            this.pnl_nurse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_nurse.Name = "pnl_nurse";
-            this.pnl_nurse.Size = new System.Drawing.Size(468, 176);
+            this.pnl_nurse.Size = new System.Drawing.Size(624, 217);
             this.pnl_nurse.TabIndex = 14;
             this.pnl_nurse.Visible = false;
             // 
@@ -529,6 +564,7 @@
             this.tableLayoutPanel5.Controls.Add(this.txt_nurMobile, 0, 5);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 7;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
@@ -538,7 +574,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.05263F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(468, 176);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(624, 217);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // lbl_nurUsername
@@ -546,9 +582,10 @@
             this.lbl_nurUsername.AutoSize = true;
             this.lbl_nurUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_nurUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nurUsername.Location = new System.Drawing.Point(3, 5);
+            this.lbl_nurUsername.Location = new System.Drawing.Point(4, 5);
+            this.lbl_nurUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nurUsername.Name = "lbl_nurUsername";
-            this.lbl_nurUsername.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurUsername.Size = new System.Drawing.Size(304, 23);
             this.lbl_nurUsername.TabIndex = 6;
             this.lbl_nurUsername.Text = "Username";
             // 
@@ -557,9 +594,10 @@
             this.lbl_nurPassword.AutoSize = true;
             this.lbl_nurPassword.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_nurPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nurPassword.Location = new System.Drawing.Point(237, 5);
+            this.lbl_nurPassword.Location = new System.Drawing.Point(316, 5);
+            this.lbl_nurPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nurPassword.Name = "lbl_nurPassword";
-            this.lbl_nurPassword.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurPassword.Size = new System.Drawing.Size(304, 23);
             this.lbl_nurPassword.TabIndex = 7;
             this.lbl_nurPassword.Text = "Password";
             // 
@@ -568,9 +606,10 @@
             this.lbl_nurFname.AutoSize = true;
             this.lbl_nurFname.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_nurFname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nurFname.Location = new System.Drawing.Point(3, 51);
+            this.lbl_nurFname.Location = new System.Drawing.Point(4, 61);
+            this.lbl_nurFname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nurFname.Name = "lbl_nurFname";
-            this.lbl_nurFname.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurFname.Size = new System.Drawing.Size(304, 23);
             this.lbl_nurFname.TabIndex = 8;
             this.lbl_nurFname.Text = "First Name";
             // 
@@ -579,9 +618,10 @@
             this.lbl_nurLname.AutoSize = true;
             this.lbl_nurLname.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_nurLname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nurLname.Location = new System.Drawing.Point(237, 51);
+            this.lbl_nurLname.Location = new System.Drawing.Point(316, 61);
+            this.lbl_nurLname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nurLname.Name = "lbl_nurLname";
-            this.lbl_nurLname.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurLname.Size = new System.Drawing.Size(304, 23);
             this.lbl_nurLname.TabIndex = 9;
             this.lbl_nurLname.Text = "Last Name";
             // 
@@ -590,9 +630,10 @@
             this.lbl_nurMobile.AutoSize = true;
             this.lbl_nurMobile.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_nurMobile.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nurMobile.Location = new System.Drawing.Point(3, 97);
+            this.lbl_nurMobile.Location = new System.Drawing.Point(4, 117);
+            this.lbl_nurMobile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nurMobile.Name = "lbl_nurMobile";
-            this.lbl_nurMobile.Size = new System.Drawing.Size(228, 18);
+            this.lbl_nurMobile.Size = new System.Drawing.Size(304, 23);
             this.lbl_nurMobile.TabIndex = 10;
             this.lbl_nurMobile.Text = "Mobile Number";
             // 
@@ -601,9 +642,10 @@
             this.txt_nurUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_nurUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_nurUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nurUsername.Location = new System.Drawing.Point(3, 26);
+            this.txt_nurUsername.Location = new System.Drawing.Point(4, 32);
+            this.txt_nurUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nurUsername.Name = "txt_nurUsername";
-            this.txt_nurUsername.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurUsername.Size = new System.Drawing.Size(304, 32);
             this.txt_nurUsername.TabIndex = 1;
             // 
             // txt_nurPassword
@@ -611,10 +653,11 @@
             this.txt_nurPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_nurPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_nurPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nurPassword.Location = new System.Drawing.Point(237, 26);
+            this.txt_nurPassword.Location = new System.Drawing.Point(316, 32);
+            this.txt_nurPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nurPassword.Name = "txt_nurPassword";
             this.txt_nurPassword.PasswordChar = '●';
-            this.txt_nurPassword.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurPassword.Size = new System.Drawing.Size(304, 32);
             this.txt_nurPassword.TabIndex = 2;
             // 
             // txt_nurFname
@@ -622,9 +665,10 @@
             this.txt_nurFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_nurFname.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_nurFname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nurFname.Location = new System.Drawing.Point(3, 72);
+            this.txt_nurFname.Location = new System.Drawing.Point(4, 88);
+            this.txt_nurFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nurFname.Name = "txt_nurFname";
-            this.txt_nurFname.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurFname.Size = new System.Drawing.Size(304, 32);
             this.txt_nurFname.TabIndex = 3;
             // 
             // txt_nurLname
@@ -632,9 +676,10 @@
             this.txt_nurLname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_nurLname.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_nurLname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nurLname.Location = new System.Drawing.Point(237, 72);
+            this.txt_nurLname.Location = new System.Drawing.Point(316, 88);
+            this.txt_nurLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nurLname.Name = "txt_nurLname";
-            this.txt_nurLname.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurLname.Size = new System.Drawing.Size(304, 32);
             this.txt_nurLname.TabIndex = 4;
             // 
             // txt_nurMobile
@@ -642,21 +687,23 @@
             this.txt_nurMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_nurMobile.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_nurMobile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nurMobile.Location = new System.Drawing.Point(3, 118);
+            this.txt_nurMobile.Location = new System.Drawing.Point(4, 144);
+            this.txt_nurMobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nurMobile.Name = "txt_nurMobile";
-            this.txt_nurMobile.Size = new System.Drawing.Size(228, 27);
+            this.txt_nurMobile.Size = new System.Drawing.Size(304, 32);
             this.txt_nurMobile.TabIndex = 5;
             // 
             // frm_register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 419);
+            this.ClientSize = new System.Drawing.Size(883, 516);
             this.Controls.Add(this.pnl_nurse);
             this.Controls.Add(this.pnl_patient);
             this.Controls.Add(this.pnl_doctor);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_register";
             this.Text = "frm_register";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_register_FormClosed);
