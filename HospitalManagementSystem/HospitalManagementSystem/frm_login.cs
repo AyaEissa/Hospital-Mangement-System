@@ -14,6 +14,8 @@ namespace HospitalManagementSystem
 {
     public partial class frm_login : Form
     {
+        Point lastLoc;
+
         string orcl = "Data Source = orcl; User Id = hr; Password = hr";
         OracleConnection con;
 
@@ -30,7 +32,10 @@ namespace HospitalManagementSystem
 
         private void cmb_loginas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updateUsernameTextColor();
+            if (checkUsername(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(), txt_username.Text))
+                txt_username.ForeColor = Color.GreenYellow;
+            else
+                txt_username.ForeColor = Color.Red;
 
             txt_username.Focus();
         }
@@ -43,7 +48,23 @@ namespace HospitalManagementSystem
             cmb_loginas.SelectedIndex = 0;
         }
 
-        private bool checkUsernameAndPassword(string loginAs, string username, string password)
+        private bool checkUsername(string loginAs, string username)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT Username ";
+
+            cmd.CommandText += "FROM " + loginAs +
+                " WHERE Username = :username";
+
+            cmd.Parameters.Add("username", username);
+            OracleDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+                    return true;
+            return false;
+        }
+
+        private bool checkPassword(string loginAs, string username, string password)
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
@@ -62,35 +83,45 @@ namespace HospitalManagementSystem
 
         private void btn_signin_Click(object sender, EventArgs e)
         {
-            if (checkUsernameAndPassword(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(),
+            if (checkUsername(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(),
+                txt_username.Text)
+                && checkPassword(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(),
                 txt_username.Text, txt_password.Text))
                 MessageBox.Show("Login Successfully", "Info",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (!checkUsername(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(),
+                txt_username.Text))
+                MessageBox.Show("Username does not exist", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
-                MessageBox.Show("Login Failed", "Error",
+                MessageBox.Show("Password incorrect", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void txt_username_TextChanged(object sender, EventArgs e)
         {
-            updateUsernameTextColor();
-        }
-
-        private void updateUsernameTextColor()
-        {
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT Username, Password_ ";
-
-            cmd.CommandText += "FROM " + cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString() +
-                " WHERE Username = :username";
-
-            cmd.Parameters.Add("username", txt_username.Text);
-            OracleDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
-                txt_username.ForeColor = Color.Green;
+            if (checkUsername(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(), txt_username.Text))
+                txt_username.ForeColor = Color.GreenYellow;
             else
                 txt_username.ForeColor = Color.Red;
+        }
+
+        private void tableLayoutPanel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastLoc = e.Location;
+        }
+
+        private void tableLayoutPanel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Location = new Point((this.Location.X - lastLoc.X) + e.X, (this.Location.Y - lastLoc.Y) + e.Y);
+            }
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
