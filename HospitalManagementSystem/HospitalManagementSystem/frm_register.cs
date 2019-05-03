@@ -14,6 +14,8 @@ namespace HospitalManagementSystem
 {
     public partial class frm_register : Form
     {
+        Point lastLoc;
+
         string orcl = "Data Source = orcl; User Id = hr; Password = hr";
         OracleConnection con;
 
@@ -117,6 +119,24 @@ namespace HospitalManagementSystem
                 pnl_nurse.Visible = true;
                 pnl_nurse.Dock = DockStyle.Fill;
                 txt_nurUsername.Focus();
+            }
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tableLayoutPanel6_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastLoc = e.Location;
+        }
+
+        private void tableLayoutPanel6_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Location = new Point((this.Location.X - lastLoc.X) + e.X, (this.Location.Y - lastLoc.Y) + e.Y);
             }
         }
     }
