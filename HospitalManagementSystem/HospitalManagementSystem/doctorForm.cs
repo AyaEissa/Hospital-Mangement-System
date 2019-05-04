@@ -15,14 +15,16 @@ namespace HospitalManagementSystem
     public partial class doctorForm : Form
     {
         string doctorUserName;
+        Form loginFrm;
 
         string dataConnection = "Data Source = orcl; User Id = hr; Password = hr";
         OracleConnection connection;
 
-        public doctorForm(string _userName)
+        public doctorForm(Form frm, string _userName)
         {
             InitializeComponent();
             doctorUserName = _userName;
+            loginFrm = frm;
         }
 
         private void doctorForm_Load(object sender, EventArgs e)
@@ -65,9 +67,6 @@ namespace HospitalManagementSystem
 
             mobileNum_txt.BackColor = SystemColors.Window;
             mobileNum_txt.BorderStyle = BorderStyle.Fixed3D;
-
-            password_txt.Text = Cryptography.Decrypt(password_txt.Text);
-            
         }
 
         private void saveUpdate_btn_Click(object sender, EventArgs e)
@@ -94,9 +93,6 @@ namespace HospitalManagementSystem
 
             mobileNum_txt.BackColor = SystemColors.Control;
             mobileNum_txt.BorderStyle = BorderStyle.None;
-
-            password_txt.Text = Cryptography.Encrypt(password_txt.Text);
-
         }
 
         private void cancelUpdate_btn_Click(object sender, EventArgs e)
@@ -119,7 +115,7 @@ namespace HospitalManagementSystem
             mobileNum_txt.BackColor = SystemColors.Control;
             mobileNum_txt.BorderStyle = BorderStyle.None;
 
-            password_txt.Text = Cryptography.Encrypt(password_txt.Text);
+            password_txt.Text = password_txt.Text;
         }
 
         private void saveHealth_btn_Click(object sender, EventArgs e)
@@ -173,14 +169,12 @@ namespace HospitalManagementSystem
             while (reader.Read())
             {
                 userName_txt.Text = reader[0].ToString();
-                password_txt.Text = reader[1].ToString();
+                password_txt.Text = Cryptography.Decrypt(reader[1].ToString());
                 fName_txt.Text = reader[2].ToString();
                 lName_txt.Text = reader[3].ToString();
                 mobileNum_txt.Text = reader[4].ToString();
                 department_txt.Text = reader[5].ToString();
             }
-            
-            return;
         }
 
         public void updateDoctorInfo(string _userName, string _password, string _fName,
@@ -264,6 +258,9 @@ namespace HospitalManagementSystem
             return;
         }
 
-        
+        private void doctorForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            loginFrm.Show();
+        }
     }
 }

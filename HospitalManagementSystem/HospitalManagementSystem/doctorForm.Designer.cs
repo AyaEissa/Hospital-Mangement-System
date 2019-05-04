@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.doctorInfo_groupBox = new System.Windows.Forms.GroupBox();
+            this.cancelUpdate_btn = new System.Windows.Forms.Button();
+            this.saveUpdate_btn = new System.Windows.Forms.Button();
             this.department_txt = new System.Windows.Forms.TextBox();
             this.mobileNum_txt = new System.Windows.Forms.TextBox();
             this.password_txt = new System.Windows.Forms.TextBox();
@@ -44,25 +46,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.updateDoctorInfo_btn = new System.Windows.Forms.Button();
-            this.saveUpdate_btn = new System.Windows.Forms.Button();
-            this.cancelUpdate_btn = new System.Windows.Forms.Button();
             this.patientHealth_dataGrid = new System.Windows.Forms.DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descraption = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.patientName_cmb = new System.Windows.Forms.ComboBox();
             this.saveHealth_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descraption = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.state_txt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.descraption_txt = new System.Windows.Forms.TextBox();
             this.addState_groupBox = new System.Windows.Forms.GroupBox();
-            this.saveHealthState_btn = new System.Windows.Forms.Button();
-            this.cancelHealthState_btn = new System.Windows.Forms.Button();
             this.date_txt = new System.Windows.Forms.TextBox();
+            this.cancelHealthState_btn = new System.Windows.Forms.Button();
+            this.saveHealthState_btn = new System.Windows.Forms.Button();
             this.doctorInfo_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientHealth_dataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -104,6 +104,28 @@
             this.doctorInfo_groupBox.TabIndex = 1;
             this.doctorInfo_groupBox.TabStop = false;
             this.doctorInfo_groupBox.Text = "Doctor Informaion";
+            // 
+            // cancelUpdate_btn
+            // 
+            this.cancelUpdate_btn.Location = new System.Drawing.Point(202, 207);
+            this.cancelUpdate_btn.Name = "cancelUpdate_btn";
+            this.cancelUpdate_btn.Size = new System.Drawing.Size(113, 31);
+            this.cancelUpdate_btn.TabIndex = 13;
+            this.cancelUpdate_btn.Text = "Cancel";
+            this.cancelUpdate_btn.UseVisualStyleBackColor = true;
+            this.cancelUpdate_btn.Visible = false;
+            this.cancelUpdate_btn.Click += new System.EventHandler(this.cancelUpdate_btn_Click);
+            // 
+            // saveUpdate_btn
+            // 
+            this.saveUpdate_btn.Location = new System.Drawing.Point(321, 207);
+            this.saveUpdate_btn.Name = "saveUpdate_btn";
+            this.saveUpdate_btn.Size = new System.Drawing.Size(113, 31);
+            this.saveUpdate_btn.TabIndex = 12;
+            this.saveUpdate_btn.Text = "Save";
+            this.saveUpdate_btn.UseVisualStyleBackColor = true;
+            this.saveUpdate_btn.Visible = false;
+            this.saveUpdate_btn.Click += new System.EventHandler(this.saveUpdate_btn_Click);
             // 
             // department_txt
             // 
@@ -214,46 +236,24 @@
             this.updateDoctorInfo_btn.UseVisualStyleBackColor = true;
             this.updateDoctorInfo_btn.Click += new System.EventHandler(this.updateDoctorInfo_btn_Click);
             // 
-            // saveUpdate_btn
-            // 
-            this.saveUpdate_btn.Location = new System.Drawing.Point(321, 207);
-            this.saveUpdate_btn.Name = "saveUpdate_btn";
-            this.saveUpdate_btn.Size = new System.Drawing.Size(113, 31);
-            this.saveUpdate_btn.TabIndex = 12;
-            this.saveUpdate_btn.Text = "Save";
-            this.saveUpdate_btn.UseVisualStyleBackColor = true;
-            this.saveUpdate_btn.Visible = false;
-            this.saveUpdate_btn.Click += new System.EventHandler(this.saveUpdate_btn_Click);
-            // 
-            // cancelUpdate_btn
-            // 
-            this.cancelUpdate_btn.Location = new System.Drawing.Point(202, 207);
-            this.cancelUpdate_btn.Name = "cancelUpdate_btn";
-            this.cancelUpdate_btn.Size = new System.Drawing.Size(113, 31);
-            this.cancelUpdate_btn.TabIndex = 13;
-            this.cancelUpdate_btn.Text = "Cancel";
-            this.cancelUpdate_btn.UseVisualStyleBackColor = true;
-            this.cancelUpdate_btn.Visible = false;
-            this.cancelUpdate_btn.Click += new System.EventHandler(this.cancelUpdate_btn_Click);
-            // 
             // patientHealth_dataGrid
             // 
             this.patientHealth_dataGrid.AllowUserToAddRows = false;
             this.patientHealth_dataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientHealth_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientHealth_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.patientHealth_dataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.patientHealth_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.patientHealth_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.patientHealth_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.patientHealth_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.patientHealth_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.patientHealth_dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
@@ -262,16 +262,35 @@
             this.patientHealth_dataGrid.Location = new System.Drawing.Point(11, 69);
             this.patientHealth_dataGrid.Name = "patientHealth_dataGrid";
             this.patientHealth_dataGrid.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.patientHealth_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.patientHealth_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.patientHealth_dataGrid.Size = new System.Drawing.Size(445, 266);
             this.patientHealth_dataGrid.TabIndex = 0;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "DATE";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // State
+            // 
+            this.State.HeaderText = "STATE";
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            // 
+            // Descraption
+            // 
+            this.Descraption.HeaderText = "DESCRAPTION";
+            this.Descraption.Name = "Descraption";
+            this.Descraption.ReadOnly = true;
+            this.Descraption.Width = 200;
             // 
             // label6
             // 
@@ -317,25 +336,6 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient Health State";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "DATE";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // State
-            // 
-            this.State.HeaderText = "STATE";
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            // 
-            // Descraption
-            // 
-            this.Descraption.HeaderText = "DESCRAPTION";
-            this.Descraption.Name = "Descraption";
-            this.Descraption.ReadOnly = true;
-            this.Descraption.Width = 200;
             // 
             // label7
             // 
@@ -403,15 +403,12 @@
             this.addState_groupBox.Text = "New Health State";
             this.addState_groupBox.Visible = false;
             // 
-            // saveHealthState_btn
+            // date_txt
             // 
-            this.saveHealthState_btn.Location = new System.Drawing.Point(309, 126);
-            this.saveHealthState_btn.Name = "saveHealthState_btn";
-            this.saveHealthState_btn.Size = new System.Drawing.Size(127, 31);
-            this.saveHealthState_btn.TabIndex = 16;
-            this.saveHealthState_btn.Text = "Save";
-            this.saveHealthState_btn.UseVisualStyleBackColor = true;
-            this.saveHealthState_btn.Click += new System.EventHandler(this.saveHealthState_btn_Click);
+            this.date_txt.Location = new System.Drawing.Point(60, 28);
+            this.date_txt.Name = "date_txt";
+            this.date_txt.Size = new System.Drawing.Size(168, 26);
+            this.date_txt.TabIndex = 20;
             // 
             // cancelHealthState_btn
             // 
@@ -423,12 +420,15 @@
             this.cancelHealthState_btn.UseVisualStyleBackColor = true;
             this.cancelHealthState_btn.Click += new System.EventHandler(this.cancelHealthState_btn_Click);
             // 
-            // date_txt
+            // saveHealthState_btn
             // 
-            this.date_txt.Location = new System.Drawing.Point(60, 28);
-            this.date_txt.Name = "date_txt";
-            this.date_txt.Size = new System.Drawing.Size(168, 26);
-            this.date_txt.TabIndex = 20;
+            this.saveHealthState_btn.Location = new System.Drawing.Point(309, 126);
+            this.saveHealthState_btn.Name = "saveHealthState_btn";
+            this.saveHealthState_btn.Size = new System.Drawing.Size(127, 31);
+            this.saveHealthState_btn.TabIndex = 16;
+            this.saveHealthState_btn.Text = "Save";
+            this.saveHealthState_btn.UseVisualStyleBackColor = true;
+            this.saveHealthState_btn.Click += new System.EventHandler(this.saveHealthState_btn_Click);
             // 
             // doctorForm
             // 
@@ -443,6 +443,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "doctorForm";
             this.Text = "Dector Form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.doctorForm_FormClosed);
             this.Load += new System.EventHandler(this.doctorForm_Load);
             this.doctorInfo_groupBox.ResumeLayout(false);
             this.doctorInfo_groupBox.PerformLayout();
