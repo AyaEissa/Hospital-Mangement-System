@@ -32,7 +32,7 @@ namespace HospitalManagementSystem
 
         private void cmb_loginas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (checkUsername(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(), txt_username.Text))
+            if (checkUsername(cmb_loginas.SelectedItem.ToString(), txt_username.Text))
                 txt_username.ForeColor = Color.GreenYellow;
             else
                 txt_username.ForeColor = Color.Red;
@@ -60,7 +60,7 @@ namespace HospitalManagementSystem
             cmd.Parameters.Add("username", username);
             OracleDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
-                    return true;
+                return true;
             return false;
         }
 
@@ -83,13 +83,19 @@ namespace HospitalManagementSystem
 
         private void btn_signin_Click(object sender, EventArgs e)
         {
-            if (checkUsername(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(),
+            if (checkUsername(cmb_loginas.SelectedItem.ToString(),
                 txt_username.Text)
-                && checkPassword(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(),
+                && checkPassword(cmb_loginas.SelectedItem.ToString(),
                 txt_username.Text, txt_password.Text))
-                MessageBox.Show("Login Successfully", "Info",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (!checkUsername(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(),
+            {
+                if (cmb_loginas.SelectedItem.ToString() == "Doctor")
+                {
+                    doctorForm Doctor_Form = new doctorForm(this, txt_username.Text);
+                    this.Hide();
+                    Doctor_Form.Show();
+                }
+            }
+            else if (!checkUsername(cmb_loginas.SelectedItem.ToString(),
                 txt_username.Text))
                 MessageBox.Show("Username does not exist", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -100,7 +106,7 @@ namespace HospitalManagementSystem
 
         private void txt_username_TextChanged(object sender, EventArgs e)
         {
-            if (checkUsername(cmb_loginas.Items[cmb_loginas.SelectedIndex].ToString(), txt_username.Text))
+            if (checkUsername(cmb_loginas.SelectedItem.ToString(), txt_username.Text))
                 txt_username.ForeColor = Color.GreenYellow;
             else
                 txt_username.ForeColor = Color.Red;
