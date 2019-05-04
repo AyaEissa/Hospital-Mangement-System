@@ -33,7 +33,7 @@ namespace HospitalManagementSystem
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
-            if (cmb_registeras.Items[cmb_registeras.SelectedIndex].ToString() == "Doctor")
+            if (cmb_registeras.SelectedItem.ToString() == "Doctor")
             {
                 cmd.CommandText = "INSERT INTO Doctor " +
                     "VALUES (:username, :password, :fname, :lname, :mobilenumber, :department)";
@@ -44,7 +44,7 @@ namespace HospitalManagementSystem
                 cmd.Parameters.Add("mobilenumber", txt_mobile.Text);
                 cmd.Parameters.Add("department", txt_department.Text);
             }
-            else if (cmb_registeras.Items[cmb_registeras.SelectedIndex].ToString() == "Patient")
+            else if (cmb_registeras.SelectedItem.ToString() == "Patient")
             {
                 cmd.CommandText = "INSERT INTO Patient " +
                     "VALUES (:username, :password, :name, :nationalid, :age, :mobilenumber)";
@@ -55,7 +55,7 @@ namespace HospitalManagementSystem
                 cmd.Parameters.Add("age", txt_patAge.Text);
                 cmd.Parameters.Add("mobilenumber", txt_patMobilenumber.Text);
             }
-            else if (cmb_registeras.Items[cmb_registeras.SelectedIndex].ToString() == "Nurse")
+            else if (cmb_registeras.SelectedItem.ToString() == "Nurse")
             {
                 cmd.CommandText = "INSERT INTO Nurse " +
                     "VALUES (:username, :password, :fname, :lname, :mobilenumber)";
@@ -91,7 +91,7 @@ namespace HospitalManagementSystem
 
         private void cmb_registeras_SelectedIndexChanged(object sender, EventArgs e)
         {
-            showRequiredPanel(cmb_registeras.Items[cmb_registeras.SelectedIndex].ToString());
+            showRequiredPanel(cmb_registeras.SelectedItem.ToString());
         }
 
         private void showRequiredPanel(string registerAs)
