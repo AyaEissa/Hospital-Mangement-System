@@ -8,8 +8,7 @@ create table Patient
 (
 Username VARCHAR2(30) PRIMARY KEY,
 Password_ varchar2(256) NOT NULL,
-FNamee varchar2 (40) NOT NULL,
-LName varchar2(40) not null,
+namee varchar2 (40) NOT NULL,
 National_ID NUMBER(20) NOT NULL,
 age NUMBER(3) NOT NULL,
 Mobile_number varchar2(13) NOT NULL
