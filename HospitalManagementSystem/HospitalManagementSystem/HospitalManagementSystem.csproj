@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cryptography.cs" />
+    <Compile Include="doctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctorForm.Designer.cs">
+      <DependentUpon>doctorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Medicine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Rooms.Designer.cs">
       <DependentUpon>Rooms.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="doctorForm.resx">
+      <DependentUpon>doctorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Medicine.resx">
       <DependentUpon>Form_Medicine.cs</DependentUpon>
     </EmbeddedResource>
