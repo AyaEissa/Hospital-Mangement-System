@@ -27,13 +27,21 @@ namespace HospitalManagementSystem
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form_Medicine_Load(object sender, EventArgs e)
         {
+
+            getMedcine();
+
+            medicineTable.Columns[0].HeaderText = "Name";
+            medicineTable.Columns[1].HeaderText = "ID";
+            medicineTable.Columns[2].HeaderText = "Quantity";
+            medicineTable.Columns[3].HeaderText = "Expiry Year";
+
+            medicieneName_txt.Text = medicineTable.Rows[0].Cells[0].Value.ToString();
+            medicineId_cmb.Text = medicineTable.Rows[0].Cells[1].Value.ToString();
+            medicineQuantity_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
+            medicineYear_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
+            
             con = new OracleConnection(orcl);
             con.Open();
             
@@ -45,12 +53,19 @@ namespace HospitalManagementSystem
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                comboBox1.Items.Add(dr[0]);
+                medicineId_cmb.Items.Add(dr[0]);
 
             }
             dr.Close();
         }
 
+        private void medicineTable_MouseClick(object sender, MouseEventArgs e)
+        {
+            medicieneName_txt.Text = medicineTable.SelectedRows[0].Cells[0].Value.ToString();
+            medicineId_cmb.Text = medicineTable.SelectedRows[0].Cells[1].Value.ToString();
+            medicineQuantity_txt.Text = medicineTable.SelectedRows[0].Cells[2].Value.ToString();
+            medicineYear_txt.Text = medicineTable.SelectedRows[0].Cells[3].Value.ToString();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             OracleCommand cmd = new OracleCommand();
@@ -59,24 +74,20 @@ namespace HospitalManagementSystem
             cmd.CommandText = "INSERT INTO Medicine " +
                    "VALUES (:Medicine_name, :Medicine_ID,:Quantity, :Expiry_year)";
             
-            cmd.Parameters.Add("Medicine_name", textBox1.Text);
-            cmd.Parameters.Add("Medicine_ID", comboBox1.Text);
-            cmd.Parameters.Add("Quanitiy", textBox2.Text);
-            cmd.Parameters.Add("Expiry_year", textBox3.Text);
+            cmd.Parameters.Add("Medicine_name", medicieneName_txt.Text);
+            cmd.Parameters.Add("Medicine_ID", medicineId_cmb.Text);
+            cmd.Parameters.Add("Quanitiy", medicineQuantity_txt.Text);
+            cmd.Parameters.Add("Expiry_year", medicineYear_txt.Text);
             int row =cmd.ExecuteNonQuery();
             
             if (row != -1)
             {
                 DialogResult res = MessageBox.Show("Medicine Successfully Added.", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (res == DialogResult.OK)
-                    this.Close();
+
+                medicineTable.Rows.Clear();
+                getMedcine();
             }
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -91,14 +102,18 @@ namespace HospitalManagementSystem
                 " where Medicine_ID=:medicine_id";
                    
 
-            cmd.Parameters.Add("Medicine_name", textBox1.Text);
-            cmd.Parameters.Add("Medicine_ID", comboBox1.SelectedItem.ToString());
-             cmd.Parameters.Add("Expiry_year", textBox3.Text);
-            cmd.Parameters.Add("Quanitiy", textBox2.Text);
+            cmd.Parameters.Add("Medicine_name", medicieneName_txt.Text);
+            cmd.Parameters.Add("Medicine_ID", medicineId_cmb.SelectedItem.ToString());
+             cmd.Parameters.Add("Expiry_year", medicineYear_txt.Text);
+            cmd.Parameters.Add("Quanitiy", medicineQuantity_txt.Text);
             int r = cmd.ExecuteNonQuery();
             if (r != -1)
             {
                 MessageBox.Show("Medicine modified");
+
+                medicineTable.Rows.Clear();
+                getMedcine();
+
             }
 
         }
@@ -109,17 +124,31 @@ namespace HospitalManagementSystem
             c.Connection = con;
             c.CommandText = "select * from Medicine where Medicine_ID=:Medicine_ID";
             c.CommandType = CommandType.Text;
-            c.Parameters.Add("Medicine_ID", comboBox1.SelectedItem.ToString());
+            c.Parameters.Add("Medicine_ID", medicineId_cmb.SelectedItem.ToString());
             OracleDataReader dr = c.ExecuteReader();
             if (dr.Read())
             {
-                textBox1.Text = dr[0].ToString();
-                textBox2.Text = dr[2].ToString();
-                textBox3.Text = dr[3].ToString();
+                medicieneName_txt.Text = dr[0].ToString();
+                medicineQuantity_txt.Text = dr[2].ToString();
+                medicineYear_txt.Text = dr[3].ToString();
                  
             }
             dr.Close();
 
         }
+
+        
+
+        public void getMedcine()
+        {
+            string selectCommand = "select * from MEDICINE";
+            OracleDataAdapter adapter = new OracleDataAdapter(selectCommand, orcl);
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+            medicineTable.DataSource = dataSet.Tables[0];
+            return;
+        }
+
+       
     }
 }
