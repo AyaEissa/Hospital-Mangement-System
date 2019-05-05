@@ -37,14 +37,17 @@ namespace HospitalManagementSystem
             medicineTable.Columns[2].HeaderText = "Quantity";
             medicineTable.Columns[3].HeaderText = "Expiry Year";
 
-            medicieneName_txt.Text = medicineTable.Rows[0].Cells[0].Value.ToString();
-            medicineId_cmb.Text = medicineTable.Rows[0].Cells[1].Value.ToString();
-            medicineQuantity_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
-            medicineYear_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
-            
+            if (medicineTable.RowCount > 0)
+            {
+                medicieneName_txt.Text = medicineTable.Rows[0].Cells[0].Value.ToString();
+                medicineId_cmb.Text = medicineTable.Rows[0].Cells[1].Value.ToString();
+                medicineQuantity_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
+                medicineYear_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
+            }
+
             con = new OracleConnection(orcl);
             con.Open();
-            
+
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
             cmd.CommandText = "select Medicine_ID from Medicine";
@@ -73,13 +76,13 @@ namespace HospitalManagementSystem
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO Medicine " +
                    "VALUES (:Medicine_name, :Medicine_ID,:Quantity, :Expiry_year)";
-            
+
             cmd.Parameters.Add("Medicine_name", medicieneName_txt.Text);
             cmd.Parameters.Add("Medicine_ID", medicineId_cmb.Text);
             cmd.Parameters.Add("Quanitiy", medicineQuantity_txt.Text);
             cmd.Parameters.Add("Expiry_year", medicineYear_txt.Text);
-            int row =cmd.ExecuteNonQuery();
-            
+            int row = cmd.ExecuteNonQuery();
+
             if (row != -1)
             {
                 DialogResult res = MessageBox.Show("Medicine Successfully Added.", "Information",
@@ -100,11 +103,11 @@ namespace HospitalManagementSystem
                 " Expiry_year=:Expiry_year," +
                 "Quantity=:Quantity" +
                 " where Medicine_ID=:medicine_id";
-                   
+
 
             cmd.Parameters.Add("Medicine_name", medicieneName_txt.Text);
             cmd.Parameters.Add("Medicine_ID", medicineId_cmb.SelectedItem.ToString());
-             cmd.Parameters.Add("Expiry_year", medicineYear_txt.Text);
+            cmd.Parameters.Add("Expiry_year", medicineYear_txt.Text);
             cmd.Parameters.Add("Quanitiy", medicineQuantity_txt.Text);
             int r = cmd.ExecuteNonQuery();
             if (r != -1)
@@ -131,13 +134,13 @@ namespace HospitalManagementSystem
                 medicieneName_txt.Text = dr[0].ToString();
                 medicineQuantity_txt.Text = dr[2].ToString();
                 medicineYear_txt.Text = dr[3].ToString();
-                 
+
             }
             dr.Close();
 
         }
 
-        
+
 
         public void getMedcine()
         {
@@ -149,6 +152,6 @@ namespace HospitalManagementSystem
             return;
         }
 
-       
+
     }
 }
