@@ -262,5 +262,11 @@ namespace HospitalManagementSystem
         {
             loginFrm.Show();
         }
+
+        private void btn_schedule_Click(object sender, EventArgs e)
+        {
+            frm_doctorSchedule scheduleForm = new frm_doctorSchedule(doctorUserName);
+            scheduleForm.Show();
+        }
     }
 }

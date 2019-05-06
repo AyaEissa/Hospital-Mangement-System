@@ -63,6 +63,7 @@
             this.date_txt = new System.Windows.Forms.TextBox();
             this.cancelHealthState_btn = new System.Windows.Forms.Button();
             this.saveHealthState_btn = new System.Windows.Forms.Button();
+            this.btn_schedule = new System.Windows.Forms.Button();
             this.doctorInfo_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientHealth_dataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -430,11 +431,22 @@
             this.saveHealthState_btn.UseVisualStyleBackColor = true;
             this.saveHealthState_btn.Click += new System.EventHandler(this.saveHealthState_btn_Click);
             // 
+            // btn_schedule
+            // 
+            this.btn_schedule.Location = new System.Drawing.Point(195, 12);
+            this.btn_schedule.Name = "btn_schedule";
+            this.btn_schedule.Size = new System.Drawing.Size(177, 31);
+            this.btn_schedule.TabIndex = 14;
+            this.btn_schedule.Text = "Schedule";
+            this.btn_schedule.UseVisualStyleBackColor = true;
+            this.btn_schedule.Click += new System.EventHandler(this.btn_schedule_Click);
+            // 
             // doctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 478);
+            this.Controls.Add(this.btn_schedule);
             this.Controls.Add(this.addState_groupBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.updateDoctorInfo_btn);
@@ -490,5 +502,6 @@
         private System.Windows.Forms.Button cancelHealthState_btn;
         private System.Windows.Forms.Button saveHealthState_btn;
         private System.Windows.Forms.TextBox date_txt;
+        private System.Windows.Forms.Button btn_schedule;
     }
 }
