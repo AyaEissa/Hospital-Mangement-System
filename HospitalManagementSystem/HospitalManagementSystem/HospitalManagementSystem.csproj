@@ -165,5 +165,8 @@
   <ItemGroup>
     <None Include="Resources\hims-bg-top.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hospital-Management-System-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
