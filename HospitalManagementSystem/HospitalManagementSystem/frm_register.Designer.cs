@@ -113,7 +113,7 @@
             "Patient",
             "Nurse"});
             this.cmb_registeras.Location = new System.Drawing.Point(4, 94);
-            this.cmb_registeras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_registeras.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_registeras.Name = "cmb_registeras";
             this.cmb_registeras.Size = new System.Drawing.Size(875, 31);
             this.cmb_registeras.TabIndex = 0;
@@ -123,7 +123,7 @@
             // 
             this.pnl_doctor.Controls.Add(this.tableLayoutPanel3);
             this.pnl_doctor.Location = new System.Drawing.Point(16, 139);
-            this.pnl_doctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_doctor.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_doctor.Name = "pnl_doctor";
             this.pnl_doctor.Size = new System.Drawing.Size(624, 217);
             this.pnl_doctor.TabIndex = 10;
@@ -149,7 +149,7 @@
             this.tableLayoutPanel3.Controls.Add(this.txt_department, 1, 5);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 7;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
@@ -248,7 +248,7 @@
             this.txt_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.White;
             this.txt_username.Location = new System.Drawing.Point(4, 32);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(304, 32);
             this.txt_username.TabIndex = 1;
@@ -261,7 +261,7 @@
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.White;
             this.txt_password.Location = new System.Drawing.Point(316, 32);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '●';
             this.txt_password.Size = new System.Drawing.Size(304, 32);
@@ -275,7 +275,7 @@
             this.txt_fname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_fname.ForeColor = System.Drawing.Color.White;
             this.txt_fname.Location = new System.Drawing.Point(4, 88);
-            this.txt_fname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_fname.Margin = new System.Windows.Forms.Padding(4);
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(304, 32);
             this.txt_fname.TabIndex = 3;
@@ -288,7 +288,7 @@
             this.txt_lname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lname.ForeColor = System.Drawing.Color.White;
             this.txt_lname.Location = new System.Drawing.Point(316, 88);
-            this.txt_lname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_lname.Margin = new System.Windows.Forms.Padding(4);
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(304, 32);
             this.txt_lname.TabIndex = 4;
@@ -301,7 +301,7 @@
             this.txt_mobile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mobile.ForeColor = System.Drawing.Color.White;
             this.txt_mobile.Location = new System.Drawing.Point(4, 144);
-            this.txt_mobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_mobile.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mobile.Name = "txt_mobile";
             this.txt_mobile.Size = new System.Drawing.Size(304, 32);
             this.txt_mobile.TabIndex = 5;
@@ -314,7 +314,7 @@
             this.txt_department.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_department.ForeColor = System.Drawing.Color.White;
             this.txt_department.Location = new System.Drawing.Point(316, 144);
-            this.txt_department.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_department.Margin = new System.Windows.Forms.Padding(4);
             this.txt_department.Name = "txt_department";
             this.txt_department.Size = new System.Drawing.Size(304, 32);
             this.txt_department.TabIndex = 6;
@@ -327,7 +327,7 @@
             this.btn_save.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
             this.btn_save.Location = new System.Drawing.Point(4, 4);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(433, 49);
             this.btn_save.TabIndex = 7;
@@ -343,7 +343,7 @@
             this.btn_cancel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
             this.btn_cancel.Location = new System.Drawing.Point(445, 4);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(434, 49);
             this.btn_cancel.TabIndex = 8;
@@ -360,7 +360,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_cancel, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 459);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -377,7 +377,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -395,7 +395,7 @@
             this.tableLayoutPanel6.Controls.Add(this.btn_close, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -412,7 +412,7 @@
             this.btn_close.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
             this.btn_close.Location = new System.Drawing.Point(839, 4);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(4);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(32, 33);
             this.btn_close.TabIndex = 11;
@@ -424,7 +424,7 @@
             // 
             this.pnl_patient.Controls.Add(this.tableLayoutPanel4);
             this.pnl_patient.Location = new System.Drawing.Point(157, 176);
-            this.pnl_patient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_patient.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_patient.Name = "pnl_patient";
             this.pnl_patient.Size = new System.Drawing.Size(624, 217);
             this.pnl_patient.TabIndex = 13;
@@ -450,7 +450,7 @@
             this.tableLayoutPanel4.Controls.Add(this.txt_patMobilenumber, 1, 5);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 7;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
@@ -549,7 +549,7 @@
             this.txt_patUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patUsername.ForeColor = System.Drawing.Color.White;
             this.txt_patUsername.Location = new System.Drawing.Point(4, 32);
-            this.txt_patUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_patUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txt_patUsername.Name = "txt_patUsername";
             this.txt_patUsername.Size = new System.Drawing.Size(304, 32);
             this.txt_patUsername.TabIndex = 1;
@@ -562,7 +562,7 @@
             this.txt_patPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patPassword.ForeColor = System.Drawing.Color.White;
             this.txt_patPassword.Location = new System.Drawing.Point(316, 32);
-            this.txt_patPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_patPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txt_patPassword.Name = "txt_patPassword";
             this.txt_patPassword.PasswordChar = '●';
             this.txt_patPassword.Size = new System.Drawing.Size(304, 32);
@@ -576,7 +576,7 @@
             this.txt_patName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patName.ForeColor = System.Drawing.Color.White;
             this.txt_patName.Location = new System.Drawing.Point(4, 88);
-            this.txt_patName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_patName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_patName.Name = "txt_patName";
             this.txt_patName.Size = new System.Drawing.Size(304, 32);
             this.txt_patName.TabIndex = 3;
@@ -589,7 +589,7 @@
             this.txt_patNationalID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patNationalID.ForeColor = System.Drawing.Color.White;
             this.txt_patNationalID.Location = new System.Drawing.Point(316, 88);
-            this.txt_patNationalID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_patNationalID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_patNationalID.Name = "txt_patNationalID";
             this.txt_patNationalID.Size = new System.Drawing.Size(304, 32);
             this.txt_patNationalID.TabIndex = 4;
@@ -602,7 +602,7 @@
             this.txt_patAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patAge.ForeColor = System.Drawing.Color.White;
             this.txt_patAge.Location = new System.Drawing.Point(4, 144);
-            this.txt_patAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_patAge.Margin = new System.Windows.Forms.Padding(4);
             this.txt_patAge.Name = "txt_patAge";
             this.txt_patAge.Size = new System.Drawing.Size(304, 32);
             this.txt_patAge.TabIndex = 5;
@@ -615,7 +615,7 @@
             this.txt_patMobilenumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_patMobilenumber.ForeColor = System.Drawing.Color.White;
             this.txt_patMobilenumber.Location = new System.Drawing.Point(316, 144);
-            this.txt_patMobilenumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_patMobilenumber.Margin = new System.Windows.Forms.Padding(4);
             this.txt_patMobilenumber.Name = "txt_patMobilenumber";
             this.txt_patMobilenumber.Size = new System.Drawing.Size(304, 32);
             this.txt_patMobilenumber.TabIndex = 6;
@@ -624,7 +624,7 @@
             // 
             this.pnl_nurse.Controls.Add(this.tableLayoutPanel5);
             this.pnl_nurse.Location = new System.Drawing.Point(247, 224);
-            this.pnl_nurse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_nurse.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_nurse.Name = "pnl_nurse";
             this.pnl_nurse.Size = new System.Drawing.Size(624, 217);
             this.pnl_nurse.TabIndex = 14;
@@ -648,7 +648,7 @@
             this.tableLayoutPanel5.Controls.Add(this.txt_nurMobile, 0, 5);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 7;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1579F));
@@ -734,7 +734,7 @@
             this.txt_nurUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nurUsername.ForeColor = System.Drawing.Color.White;
             this.txt_nurUsername.Location = new System.Drawing.Point(4, 32);
-            this.txt_nurUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nurUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nurUsername.Name = "txt_nurUsername";
             this.txt_nurUsername.Size = new System.Drawing.Size(304, 32);
             this.txt_nurUsername.TabIndex = 1;
@@ -747,7 +747,7 @@
             this.txt_nurPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nurPassword.ForeColor = System.Drawing.Color.White;
             this.txt_nurPassword.Location = new System.Drawing.Point(316, 32);
-            this.txt_nurPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nurPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nurPassword.Name = "txt_nurPassword";
             this.txt_nurPassword.PasswordChar = '●';
             this.txt_nurPassword.Size = new System.Drawing.Size(304, 32);
@@ -761,7 +761,7 @@
             this.txt_nurFname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nurFname.ForeColor = System.Drawing.Color.White;
             this.txt_nurFname.Location = new System.Drawing.Point(4, 88);
-            this.txt_nurFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nurFname.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nurFname.Name = "txt_nurFname";
             this.txt_nurFname.Size = new System.Drawing.Size(304, 32);
             this.txt_nurFname.TabIndex = 3;
@@ -774,7 +774,7 @@
             this.txt_nurLname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nurLname.ForeColor = System.Drawing.Color.White;
             this.txt_nurLname.Location = new System.Drawing.Point(316, 88);
-            this.txt_nurLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nurLname.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nurLname.Name = "txt_nurLname";
             this.txt_nurLname.Size = new System.Drawing.Size(304, 32);
             this.txt_nurLname.TabIndex = 4;
@@ -787,7 +787,7 @@
             this.txt_nurMobile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nurMobile.ForeColor = System.Drawing.Color.White;
             this.txt_nurMobile.Location = new System.Drawing.Point(4, 144);
-            this.txt_nurMobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nurMobile.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nurMobile.Name = "txt_nurMobile";
             this.txt_nurMobile.Size = new System.Drawing.Size(304, 32);
             this.txt_nurMobile.TabIndex = 5;
@@ -804,7 +804,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_register";
             this.Text = "frm_register";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_register_FormClosed);

@@ -88,7 +88,7 @@ namespace HospitalManagementSystem
                 DialogResult res = MessageBox.Show("Medicine Successfully Added.", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                medicineTable.Rows.Clear();
+               medicineTable.Rows.Clear();
                 getMedcine();
             }
         }
