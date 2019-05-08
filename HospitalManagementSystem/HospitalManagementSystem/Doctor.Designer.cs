@@ -59,7 +59,8 @@
             // 
             this.department.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.department.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.department.Location = new System.Drawing.Point(389, 250);
+            this.department.ForeColor = System.Drawing.Color.White;
+            this.department.Location = new System.Drawing.Point(394, 252);
             this.department.Name = "department";
             this.department.Size = new System.Drawing.Size(170, 22);
             this.department.TabIndex = 26;
@@ -82,9 +83,10 @@
             // 
             this.firstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.firstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.firstname.ForeColor = System.Drawing.Color.White;
             this.firstname.Location = new System.Drawing.Point(394, 90);
             this.firstname.Name = "firstname";
-            this.firstname.Size = new System.Drawing.Size(165, 22);
+            this.firstname.Size = new System.Drawing.Size(170, 22);
             this.firstname.TabIndex = 23;
             this.firstname.TextChanged += new System.EventHandler(this.firstname_TextChanged);
             // 
@@ -92,7 +94,8 @@
             // 
             this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.password.Location = new System.Drawing.Point(389, 195);
+            this.password.ForeColor = System.Drawing.Color.White;
+            this.password.Location = new System.Drawing.Point(394, 195);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(170, 22);
             this.password.TabIndex = 22;
@@ -102,8 +105,8 @@
             // 
             this.mobile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.mobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mobile.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.mobile.Location = new System.Drawing.Point(389, 295);
+            this.mobile.ForeColor = System.Drawing.Color.White;
+            this.mobile.Location = new System.Drawing.Point(394, 297);
             this.mobile.Name = "mobile";
             this.mobile.Size = new System.Drawing.Size(170, 22);
             this.mobile.TabIndex = 21;
@@ -185,7 +188,8 @@
             // 
             this.lastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.lastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lastname.Location = new System.Drawing.Point(389, 138);
+            this.lastname.ForeColor = System.Drawing.Color.White;
+            this.lastname.Location = new System.Drawing.Point(394, 138);
             this.lastname.Name = "lastname";
             this.lastname.Size = new System.Drawing.Size(170, 22);
             this.lastname.TabIndex = 29;

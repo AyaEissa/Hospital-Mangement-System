@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -81,6 +81,7 @@
             // 
             this.medicieneName_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.medicieneName_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.medicieneName_txt.ForeColor = System.Drawing.Color.White;
             this.medicieneName_txt.Location = new System.Drawing.Point(151, 10);
             this.medicieneName_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.medicieneName_txt.Name = "medicieneName_txt";
@@ -91,6 +92,7 @@
             // 
             this.medicineQuantity_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.medicineQuantity_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.medicineQuantity_txt.ForeColor = System.Drawing.Color.White;
             this.medicineQuantity_txt.Location = new System.Drawing.Point(151, 70);
             this.medicineQuantity_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.medicineQuantity_txt.Name = "medicineQuantity_txt";
@@ -101,6 +103,7 @@
             // 
             this.medicineYear_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.medicineYear_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.medicineYear_txt.ForeColor = System.Drawing.Color.White;
             this.medicineYear_txt.Location = new System.Drawing.Point(151, 100);
             this.medicineYear_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.medicineYear_txt.Name = "medicineYear_txt";
@@ -164,9 +167,9 @@
             // 
             this.medicineTable.AllowUserToAddRows = false;
             this.medicineTable.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medicineTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicineTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.medicineTable.BackgroundColor = System.Drawing.SystemColors.Control;
             this.medicineTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.medicineTable.Location = new System.Drawing.Point(16, 158);

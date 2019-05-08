@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.doctorInfo_groupBox = new System.Windows.Forms.GroupBox();
             this.cancelUpdate_btn = new System.Windows.Forms.Button();
@@ -139,6 +139,7 @@
             // 
             this.department_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.department_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.department_txt.ForeColor = System.Drawing.Color.White;
             this.department_txt.Location = new System.Drawing.Point(138, 178);
             this.department_txt.Name = "department_txt";
             this.department_txt.Size = new System.Drawing.Size(256, 30);
@@ -149,6 +150,7 @@
             // 
             this.mobileNum_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.mobileNum_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mobileNum_txt.ForeColor = System.Drawing.Color.White;
             this.mobileNum_txt.Location = new System.Drawing.Point(138, 145);
             this.mobileNum_txt.Name = "mobileNum_txt";
             this.mobileNum_txt.Size = new System.Drawing.Size(256, 30);
@@ -159,6 +161,7 @@
             // 
             this.password_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.password_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.password_txt.ForeColor = System.Drawing.Color.White;
             this.password_txt.Location = new System.Drawing.Point(138, 112);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '*';
@@ -170,6 +173,7 @@
             // 
             this.userName_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.userName_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userName_txt.ForeColor = System.Drawing.Color.White;
             this.userName_txt.Location = new System.Drawing.Point(138, 77);
             this.userName_txt.Name = "userName_txt";
             this.userName_txt.Size = new System.Drawing.Size(256, 30);
@@ -181,6 +185,7 @@
             // 
             this.lName_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.lName_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lName_txt.ForeColor = System.Drawing.Color.White;
             this.lName_txt.Location = new System.Drawing.Point(269, 43);
             this.lName_txt.Name = "lName_txt";
             this.lName_txt.Size = new System.Drawing.Size(125, 30);
@@ -191,6 +196,7 @@
             // 
             this.fName_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.fName_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fName_txt.ForeColor = System.Drawing.Color.White;
             this.fName_txt.Location = new System.Drawing.Point(138, 43);
             this.fName_txt.Name = "fName_txt";
             this.fName_txt.Size = new System.Drawing.Size(125, 30);
@@ -262,20 +268,20 @@
             // 
             this.patientHealth_dataGrid.AllowUserToAddRows = false;
             this.patientHealth_dataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientHealth_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientHealth_dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.patientHealth_dataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.patientHealth_dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.patientHealth_dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.patientHealth_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.patientHealth_dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.patientHealth_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.patientHealth_dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
@@ -284,14 +290,14 @@
             this.patientHealth_dataGrid.Location = new System.Drawing.Point(11, 69);
             this.patientHealth_dataGrid.Name = "patientHealth_dataGrid";
             this.patientHealth_dataGrid.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.patientHealth_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.patientHealth_dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.patientHealth_dataGrid.Size = new System.Drawing.Size(445, 266);
             this.patientHealth_dataGrid.TabIndex = 0;
             // 
@@ -390,6 +396,7 @@
             // 
             this.state_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.state_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.state_txt.ForeColor = System.Drawing.Color.White;
             this.state_txt.Location = new System.Drawing.Point(284, 28);
             this.state_txt.Name = "state_txt";
             this.state_txt.Size = new System.Drawing.Size(150, 30);
@@ -411,6 +418,7 @@
             // 
             this.descraption_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.descraption_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.descraption_txt.ForeColor = System.Drawing.Color.White;
             this.descraption_txt.Location = new System.Drawing.Point(113, 60);
             this.descraption_txt.Multiline = true;
             this.descraption_txt.Name = "descraption_txt";
@@ -439,6 +447,7 @@
             // 
             this.date_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.date_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.date_txt.ForeColor = System.Drawing.Color.White;
             this.date_txt.Location = new System.Drawing.Point(60, 28);
             this.date_txt.Name = "date_txt";
             this.date_txt.Size = new System.Drawing.Size(168, 30);
