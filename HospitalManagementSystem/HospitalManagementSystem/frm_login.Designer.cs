@@ -51,7 +51,7 @@
             this.txt_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.White;
             this.txt_username.Location = new System.Drawing.Point(4, 182);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(385, 32);
             this.txt_username.TabIndex = 2;
@@ -70,7 +70,7 @@
             "Patient",
             "Nurse"});
             this.cmb_loginas.Location = new System.Drawing.Point(4, 96);
-            this.cmb_loginas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_loginas.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_loginas.Name = "cmb_loginas";
             this.cmb_loginas.Size = new System.Drawing.Size(385, 31);
             this.cmb_loginas.TabIndex = 1;
@@ -84,7 +84,7 @@
             this.btn_signin.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_signin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
             this.btn_signin.Location = new System.Drawing.Point(4, 381);
-            this.btn_signin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_signin.Margin = new System.Windows.Forms.Padding(4);
             this.btn_signin.Name = "btn_signin";
             this.btn_signin.Size = new System.Drawing.Size(385, 35);
             this.btn_signin.TabIndex = 4;
@@ -107,7 +107,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -131,7 +131,7 @@
             this.btn_signup.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_signup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
             this.btn_signup.Location = new System.Drawing.Point(4, 424);
-            this.btn_signup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_signup.Margin = new System.Windows.Forms.Padding(4);
             this.btn_signup.Name = "btn_signup";
             this.btn_signup.Size = new System.Drawing.Size(385, 43);
             this.btn_signup.TabIndex = 5;
@@ -147,7 +147,7 @@
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.White;
             this.txt_password.Location = new System.Drawing.Point(4, 268);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '●';
             this.txt_password.Size = new System.Drawing.Size(385, 32);
@@ -200,7 +200,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_close, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -217,7 +217,7 @@
             this.btn_close.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
             this.btn_close.Location = new System.Drawing.Point(349, 4);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(4);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(32, 33);
             this.btn_close.TabIndex = 10;
@@ -233,7 +233,7 @@
             this.ClientSize = new System.Drawing.Size(393, 471);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_login";
             this.Text = "frm_login";
             this.Load += new System.EventHandler(this.frm_login_Load);

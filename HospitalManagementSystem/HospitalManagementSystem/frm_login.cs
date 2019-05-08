@@ -94,6 +94,20 @@ namespace HospitalManagementSystem
                     this.Hide();
                     Doctor_Form.Show();
                 }
+                else if (cmb_loginas.SelectedItem.ToString() == "Patient")
+                {
+                    // Patient pat = new Patient(this, txt_username.Text);
+                    Patient a = new Patient();
+                    this.Hide();
+                    a.Show();
+                }
+                else if (cmb_loginas.SelectedItem.ToString() == "Nurse")
+                {
+                    Nurse b = new Nurse();
+                    this.Hide();
+                    b.Show();
+
+                }
             }
             else if (!checkUsername(cmb_loginas.SelectedItem.ToString(),
                 txt_username.Text))

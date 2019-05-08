@@ -17,7 +17,7 @@ namespace HospitalManagementSystem
         string dataConnection = "Data Source = orcl; User Id = hr; Password = hr";
         OracleConnection connection;
 
-        string docterUsername;
+       string docterUsername;
         public frm_doctorSchedule(string docUsername)
         {
             InitializeComponent();
@@ -174,6 +174,11 @@ namespace HospitalManagementSystem
             if (dr.Read())
                 return true;
             return false;
+        }
+
+        private void lbl_header_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

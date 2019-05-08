@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.nationalid = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.vew_history_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -153,11 +154,22 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "National ID:";
             // 
+            // vew_history_button
+            // 
+            this.vew_history_button.Location = new System.Drawing.Point(547, 377);
+            this.vew_history_button.Name = "vew_history_button";
+            this.vew_history_button.Size = new System.Drawing.Size(78, 42);
+            this.vew_history_button.TabIndex = 15;
+            this.vew_history_button.Text = "view history";
+            this.vew_history_button.UseVisualStyleBackColor = true;
+            this.vew_history_button.Click += new System.EventHandler(this.vew_history_button_Click);
+            // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.vew_history_button);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.nationalid);
             this.Controls.Add(this.button1);
@@ -194,5 +206,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox nationalid;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button vew_history_button;
     }
 }

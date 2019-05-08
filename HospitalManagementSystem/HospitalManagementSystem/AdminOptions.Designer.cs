@@ -132,6 +132,7 @@
             this.DoubleBuffered = true;
             this.Name = "AdminOptions";
             this.Text = "AdminOptions";
+            this.Load += new System.EventHandler(this.AdminOptions_Load);
             this.ResumeLayout(false);
 
         }

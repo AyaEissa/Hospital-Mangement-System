@@ -39,5 +39,10 @@ namespace HospitalManagementSystem
         {
 
         }
+
+        private void AdminOptions_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
