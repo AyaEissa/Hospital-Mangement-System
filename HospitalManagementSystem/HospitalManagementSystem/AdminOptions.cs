@@ -37,12 +37,36 @@ namespace HospitalManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Form_Medicine fm = new Form_Medicine();
+            fm.Show();
         }
 
         private void AdminOptions_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form_Medicine fm = new Form_Medicine();
+            fm.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Rooms r = new Rooms();
+            r.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Rooms r = new Rooms();
+            r.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

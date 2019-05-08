@@ -42,7 +42,7 @@ namespace HospitalManagementSystem
                 medicieneName_txt.Text = medicineTable.Rows[0].Cells[0].Value.ToString();
                 medicineId_cmb.Text = medicineTable.Rows[0].Cells[1].Value.ToString();
                 medicineQuantity_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
-                medicineYear_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
+                medicineYear_txt.Text = medicineTable.Rows[0].Cells[3].Value.ToString();
             }
 
             con = new OracleConnection(orcl);
@@ -155,6 +155,14 @@ namespace HospitalManagementSystem
         private void medicineTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            /*  NurseOptions no = new NurseOptions();
+              this.Close();
+              no.Show();*/
+            this.Close();
         }
     }
 }

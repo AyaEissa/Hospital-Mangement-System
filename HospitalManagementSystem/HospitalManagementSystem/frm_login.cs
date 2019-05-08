@@ -91,21 +91,22 @@ namespace HospitalManagementSystem
                 if (cmb_loginas.SelectedItem.ToString() == "Doctor")
                 {
                     doctorForm Doctor_Form = new doctorForm(this, txt_username.Text);
-                    this.Hide();
+                    
                     Doctor_Form.Show();
                 }
-                else if (cmb_loginas.SelectedItem.ToString() == "Patient")
+                 if (cmb_loginas.SelectedItem.ToString() == "Patient")
                 {
                     // Patient pat = new Patient(this, txt_username.Text);
-                    Patient a = new Patient();
-                    this.Hide();
+                    PatientOpions a = new PatientOpions();
+                    
                     a.Show();
                 }
-                else if (cmb_loginas.SelectedItem.ToString() == "Nurse")
+                 if (cmb_loginas.SelectedItem.ToString() == "Nurse")
                 {
                     NurseOptions b = new NurseOptions();
-                    this.Hide();
                     b.Show();
+                  //  this.Close();
+                   
 
                 }
             }

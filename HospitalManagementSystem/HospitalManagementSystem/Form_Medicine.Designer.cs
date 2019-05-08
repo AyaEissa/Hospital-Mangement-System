@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@
             this.medicineId_cmb = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.medicineTable = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.medicineTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +142,6 @@
             // medicineId_cmb
             // 
             this.medicineId_cmb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.medicineId_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.medicineId_cmb.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicineId_cmb.ForeColor = System.Drawing.Color.White;
             this.medicineId_cmb.FormattingEnabled = true;
@@ -167,10 +167,10 @@
             // 
             this.medicineTable.AllowUserToAddRows = false;
             this.medicineTable.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medicineTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.medicineTable.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicineTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.medicineTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.medicineTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.medicineTable.Location = new System.Drawing.Point(16, 158);
             this.medicineTable.Margin = new System.Windows.Forms.Padding(4);
@@ -182,12 +182,25 @@
             this.medicineTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.medicineTable_CellContentClick);
             this.medicineTable.MouseClick += new System.Windows.Forms.MouseEventHandler(this.medicineTable_MouseClick);
             // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.button3.Location = new System.Drawing.Point(733, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(55, 41);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form_Medicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.medicineTable);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.medicineId_cmb);
@@ -199,8 +212,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_Medicine";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Medicine";
             this.Load += new System.EventHandler(this.Form_Medicine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.medicineTable)).EndInit();
@@ -222,5 +237,6 @@
         private System.Windows.Forms.ComboBox medicineId_cmb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView medicineTable;
+        private System.Windows.Forms.Button button3;
     }
 }

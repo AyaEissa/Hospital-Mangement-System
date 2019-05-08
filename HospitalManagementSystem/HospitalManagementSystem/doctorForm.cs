@@ -131,7 +131,7 @@ namespace HospitalManagementSystem
 
         private void saveHealthState_btn_Click(object sender, EventArgs e)
         {
-            InsertHealthState(userName_txt.Text, patientName_cmb.SelectedItem.ToString(), date_txt.Text,
+            InsertHealthState(userName_txt.Text, patientName_cmb.SelectedItem.ToString(),date_txt.Text,
                 state_txt.Text, descraption_txt.Text);
 
             patientHealth_dataGrid.Rows.Clear();
@@ -248,7 +248,7 @@ namespace HospitalManagementSystem
             cmd.CommandText = "insert into PATIENTHEALTH values(:du, :pu, :vd, :s, :d)";
             cmd.Parameters.Add(":du", _doctorUserName);
             cmd.Parameters.Add(":pu", _patientUserName);
-            cmd.Parameters.Add(":vd", _date);
+            cmd.Parameters.Add(":vd",_date);
             cmd.Parameters.Add(":s", _state);
             cmd.Parameters.Add(":d", _descaption);
             cmd.CommandType = System.Data.CommandType.Text;
@@ -272,6 +272,11 @@ namespace HospitalManagementSystem
         private void userName_txt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

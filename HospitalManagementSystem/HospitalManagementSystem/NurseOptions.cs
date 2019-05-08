@@ -32,5 +32,12 @@ namespace HospitalManagementSystem
             this.Hide();
             med.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+            
+        }
     }
 }
