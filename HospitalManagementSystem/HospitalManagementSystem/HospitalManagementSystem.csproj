@@ -101,6 +101,12 @@
     <Compile Include="Nurse.Designer.cs">
       <DependentUpon>Nurse.cs</DependentUpon>
     </Compile>
+    <Compile Include="NurseOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseOptions.Designer.cs">
+      <DependentUpon>NurseOptions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nurse.resx">
       <DependentUpon>Nurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseOptions.resx">
+      <DependentUpon>NurseOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient.resx">
       <DependentUpon>Patient.cs</DependentUpon>

@@ -152,6 +152,9 @@ namespace HospitalManagementSystem
             return;
         }
 
+        private void medicineTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

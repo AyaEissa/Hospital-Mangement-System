@@ -103,7 +103,7 @@ namespace HospitalManagementSystem
                 }
                 else if (cmb_loginas.SelectedItem.ToString() == "Nurse")
                 {
-                    Nurse b = new Nurse();
+                    NurseOptions b = new NurseOptions();
                     this.Hide();
                     b.Show();
 
@@ -142,6 +142,11 @@ namespace HospitalManagementSystem
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lbl_login_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
