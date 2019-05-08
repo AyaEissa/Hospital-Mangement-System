@@ -37,7 +37,7 @@ namespace HospitalManagementSystem
 
 
             cmd.Parameters.Add("Username", comboBox1.SelectedItem.ToString());
-            cmd.Parameters.Add("Password_", password.Text);
+            cmd.Parameters.Add("Password_", Cryptography.Encrypt(password.Text));
             cmd.Parameters.Add("name", firstname.Text);
             cmd.Parameters.Add("National_ID", nationalid.Text);
             cmd.Parameters.Add("age", age.Text);
@@ -78,7 +78,7 @@ namespace HospitalManagementSystem
             OracleDataReader dr = c.ExecuteReader();
             if (dr.Read())
             {
-                password.Text = dr[1].ToString();
+                password.Text = Cryptography.Decrypt(dr[1].ToString());
                 firstname.Text = dr[2].ToString();
                 //lastname.Text = dr[3].ToString();
                 nationalid.Text = dr[3].ToString();

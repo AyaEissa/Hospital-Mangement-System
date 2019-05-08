@@ -22,22 +22,20 @@ namespace HospitalManagementSystem
         private void button2_Click(object sender, EventArgs e)
         {
             Nurse a = new Nurse();
-            this.Hide();
             a.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           Form_Medicine med = new Form_Medicine();
-            this.Hide();
+            Form_Medicine med = new Form_Medicine();
             med.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
-            
+
         }
     }
 }

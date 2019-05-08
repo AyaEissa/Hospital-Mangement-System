@@ -17,9 +17,19 @@ namespace HospitalManagementSystem
         string orcl = "Data Source = orcl; User Id = hr; Password = hr";
         OracleConnection con;
 
-        public Doctor()
+        public Doctor(bool isAdmin)
         {
             InitializeComponent();
+            if(!isAdmin)
+            {
+                button1.Visible = false;
+                firstname.ReadOnly = true;
+                lastname.ReadOnly = true;
+                password.ReadOnly = true;
+                password.PasswordChar = '*';
+                department.ReadOnly = true;
+                mobile.ReadOnly = true;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,7 +57,7 @@ namespace HospitalManagementSystem
 
 
             cmd.Parameters.Add("Username", comboBox1.SelectedItem.ToString());
-            cmd.Parameters.Add("Password_", password.Text);
+            cmd.Parameters.Add("Password_", Cryptography.Encrypt(password.Text));
             cmd.Parameters.Add("Fname", firstname.Text);
             cmd.Parameters.Add("Lname", lastname.Text);
             cmd.Parameters.Add("Mobilenumber", mobile.Text);
@@ -115,7 +125,7 @@ namespace HospitalManagementSystem
             OracleDataReader dr = c.ExecuteReader();
             if (dr.Read())
             {
-                password.Text = dr[1].ToString();
+                password.Text = Cryptography.Decrypt(dr[1].ToString());
                 firstname.Text = dr[2].ToString();
                 lastname.Text = dr[3].ToString();
                 mobile.Text = dr[4].ToString();
@@ -151,6 +161,12 @@ namespace HospitalManagementSystem
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frm_doctorSchedule doctorSchedule = new frm_doctorSchedule(comboBox1.SelectedItem.ToString());
+            doctorSchedule.Show();
         }
     }
 }

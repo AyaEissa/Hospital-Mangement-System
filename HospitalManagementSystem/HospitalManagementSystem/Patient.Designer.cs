@@ -47,10 +47,12 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(325, 42);
+            this.comboBox1.Location = new System.Drawing.Point(201, 48);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(209, 24);
+            this.comboBox1.Size = new System.Drawing.Size(158, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -59,9 +61,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.label1.Location = new System.Drawing.Point(74, 46);
+            this.label1.Location = new System.Drawing.Point(11, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 19);
+            this.label1.Size = new System.Drawing.Size(186, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Choose Patient Username:";
             // 
@@ -70,9 +73,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.label3.Location = new System.Drawing.Point(128, 104);
+            this.label3.Location = new System.Drawing.Point(104, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 23);
+            this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "First Name:";
             // 
@@ -81,9 +85,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.label4.Location = new System.Drawing.Point(128, 156);
+            this.label4.Location = new System.Drawing.Point(151, 130);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 23);
+            this.label4.Size = new System.Drawing.Size(46, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "Age:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -93,9 +98,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.label5.Location = new System.Drawing.Point(128, 203);
+            this.label5.Location = new System.Drawing.Point(113, 172);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 23);
+            this.label5.Size = new System.Drawing.Size(84, 19);
             this.label5.TabIndex = 5;
             this.label5.Text = "Password:";
             // 
@@ -104,9 +110,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.label6.Location = new System.Drawing.Point(128, 305);
+            this.label6.Location = new System.Drawing.Point(63, 256);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 23);
+            this.label6.Size = new System.Drawing.Size(134, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "Mobile Number:";
             // 
@@ -114,18 +121,22 @@
             // 
             this.mobile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.mobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mobile.Location = new System.Drawing.Point(320, 300);
+            this.mobile.ForeColor = System.Drawing.Color.White;
+            this.mobile.Location = new System.Drawing.Point(200, 254);
+            this.mobile.Margin = new System.Windows.Forms.Padding(2);
             this.mobile.Name = "mobile";
-            this.mobile.Size = new System.Drawing.Size(214, 22);
+            this.mobile.Size = new System.Drawing.Size(161, 20);
             this.mobile.TabIndex = 7;
             // 
             // password
             // 
             this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.password.Location = new System.Drawing.Point(320, 204);
+            this.password.ForeColor = System.Drawing.Color.White;
+            this.password.Location = new System.Drawing.Point(200, 172);
+            this.password.Margin = new System.Windows.Forms.Padding(2);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(214, 22);
+            this.password.Size = new System.Drawing.Size(161, 20);
             this.password.TabIndex = 8;
             this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
@@ -133,9 +144,11 @@
             // 
             this.firstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.firstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.firstname.Location = new System.Drawing.Point(320, 101);
+            this.firstname.ForeColor = System.Drawing.Color.White;
+            this.firstname.Location = new System.Drawing.Point(200, 90);
+            this.firstname.Margin = new System.Windows.Forms.Padding(2);
             this.firstname.Name = "firstname";
-            this.firstname.Size = new System.Drawing.Size(214, 22);
+            this.firstname.Size = new System.Drawing.Size(161, 20);
             this.firstname.TabIndex = 9;
             this.firstname.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -143,9 +156,11 @@
             // 
             this.age.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.age.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.age.Location = new System.Drawing.Point(320, 151);
+            this.age.ForeColor = System.Drawing.Color.White;
+            this.age.Location = new System.Drawing.Point(200, 131);
+            this.age.Margin = new System.Windows.Forms.Padding(2);
             this.age.Name = "age";
-            this.age.Size = new System.Drawing.Size(214, 22);
+            this.age.Size = new System.Drawing.Size(161, 20);
             this.age.TabIndex = 10;
             // 
             // button1
@@ -153,9 +168,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.button1.Location = new System.Drawing.Point(353, 374);
+            this.button1.Location = new System.Drawing.Point(485, 321);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 42);
+            this.button1.Size = new System.Drawing.Size(104, 34);
             this.button1.TabIndex = 12;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
@@ -165,9 +181,11 @@
             // 
             this.nationalid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.nationalid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nationalid.Location = new System.Drawing.Point(320, 255);
+            this.nationalid.ForeColor = System.Drawing.Color.White;
+            this.nationalid.Location = new System.Drawing.Point(200, 213);
+            this.nationalid.Margin = new System.Windows.Forms.Padding(2);
             this.nationalid.Name = "nationalid";
-            this.nationalid.Size = new System.Drawing.Size(214, 22);
+            this.nationalid.Size = new System.Drawing.Size(161, 20);
             this.nationalid.TabIndex = 13;
             // 
             // label7
@@ -175,9 +193,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.label7.Location = new System.Drawing.Point(128, 260);
+            this.label7.Location = new System.Drawing.Point(99, 214);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 23);
+            this.label7.Size = new System.Drawing.Size(98, 19);
             this.label7.TabIndex = 14;
             this.label7.Text = "National ID:";
             // 
@@ -186,9 +205,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.button2.Location = new System.Drawing.Point(749, 1);
+            this.button2.Location = new System.Drawing.Point(551, 11);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 39);
+            this.button2.Size = new System.Drawing.Size(38, 32);
             this.button2.TabIndex = 15;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
@@ -196,11 +216,11 @@
             // 
             // Patient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.nationalid);
@@ -216,6 +236,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Patient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patient";

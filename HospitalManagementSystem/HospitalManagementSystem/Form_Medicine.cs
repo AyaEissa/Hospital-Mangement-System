@@ -34,15 +34,15 @@ namespace HospitalManagementSystem
 
             medicineTable.Columns[0].HeaderText = "Name";
             medicineTable.Columns[1].HeaderText = "ID";
-            medicineTable.Columns[2].HeaderText = "Quantity";
-            medicineTable.Columns[3].HeaderText = "Expiry Year";
+            medicineTable.Columns[2].HeaderText = "Expiry Year";
+            medicineTable.Columns[3].HeaderText = "Quantity";
 
             if (medicineTable.RowCount > 0)
             {
                 medicieneName_txt.Text = medicineTable.Rows[0].Cells[0].Value.ToString();
                 medicineId_cmb.Text = medicineTable.Rows[0].Cells[1].Value.ToString();
-                medicineQuantity_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
-                medicineYear_txt.Text = medicineTable.Rows[0].Cells[3].Value.ToString();
+                medicineYear_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
+                medicineQuantity_txt.Text = medicineTable.Rows[0].Cells[3].Value.ToString();
             }
 
             con = new OracleConnection(orcl);
@@ -64,22 +64,23 @@ namespace HospitalManagementSystem
 
         private void medicineTable_MouseClick(object sender, MouseEventArgs e)
         {
-            medicieneName_txt.Text = medicineTable.SelectedRows[0].Cells[0].Value.ToString();
-            medicineId_cmb.Text = medicineTable.SelectedRows[0].Cells[1].Value.ToString();
-            medicineQuantity_txt.Text = medicineTable.SelectedRows[0].Cells[2].Value.ToString();
-            medicineYear_txt.Text = medicineTable.SelectedRows[0].Cells[3].Value.ToString();
+            medicieneName_txt.Text = medicineTable.Rows[0].Cells[0].Value.ToString();
+            medicineId_cmb.Text = medicineTable.Rows[0].Cells[1].Value.ToString();
+            medicineYear_txt.Text = medicineTable.Rows[0].Cells[2].Value.ToString();
+            medicineQuantity_txt.Text = medicineTable.Rows[0].Cells[3].Value.ToString();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO Medicine " +
-                   "VALUES (:Medicine_name, :Medicine_ID,:Quantity, :Expiry_year)";
+                   "VALUES (:Medicine_name, :Medicine_ID, :Expiry_year, :Quantity)";
 
             cmd.Parameters.Add("Medicine_name", medicieneName_txt.Text);
             cmd.Parameters.Add("Medicine_ID", medicineId_cmb.Text);
-            cmd.Parameters.Add("Quanitiy", medicineQuantity_txt.Text);
+            cmd.Parameters.Add("Quantity", medicineQuantity_txt.Text);
             cmd.Parameters.Add("Expiry_year", medicineYear_txt.Text);
             int row = cmd.ExecuteNonQuery();
 
@@ -88,7 +89,7 @@ namespace HospitalManagementSystem
                 DialogResult res = MessageBox.Show("Medicine Successfully Added.", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-               medicineTable.Rows.Clear();
+                medicineTable.DataSource = null;
                 getMedcine();
             }
         }
@@ -99,22 +100,22 @@ namespace HospitalManagementSystem
             cmd.Connection = con;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "Update Medicine Set Medicine_name=:Medicine_name," +
-                "Medicine_ID=:Medicine_ID," +
-                " Expiry_year=:Expiry_year," +
-                "Quantity=:Quantity" +
-                " where Medicine_ID=:medicine_id";
+                "Medicine_ID=:Medicine_ID, " +
+                "Expiry_year=:Expiry_year, " +
+                "Quanitiy=:Quantity " +
+                "where Medicine_ID=:medicine_id";
 
 
             cmd.Parameters.Add("Medicine_name", medicieneName_txt.Text);
             cmd.Parameters.Add("Medicine_ID", medicineId_cmb.SelectedItem.ToString());
             cmd.Parameters.Add("Expiry_year", medicineYear_txt.Text);
-            cmd.Parameters.Add("Quanitiy", medicineQuantity_txt.Text);
+            cmd.Parameters.Add("Quantity", medicineQuantity_txt.Text);
             int r = cmd.ExecuteNonQuery();
             if (r != -1)
             {
                 MessageBox.Show("Medicine modified");
 
-                medicineTable.Rows.Clear();
+                medicineTable.DataSource = null;
                 getMedcine();
 
             }

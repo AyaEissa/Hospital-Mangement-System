@@ -32,10 +32,11 @@ namespace HospitalManagementSystem
 
         private void cmb_loginas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (checkUsername(cmb_loginas.SelectedItem.ToString(), txt_username.Text))
-                txt_username.ForeColor = Color.GreenYellow;
-            else
-                txt_username.ForeColor = Color.Red;
+            if (cmb_loginas.SelectedIndex >= 0 && cmb_loginas.SelectedIndex < 3)
+                if (checkUsername(cmb_loginas.SelectedItem.ToString(), txt_username.Text))
+                    txt_username.ForeColor = Color.GreenYellow;
+                else
+                    txt_username.ForeColor = Color.Red;
 
             txt_username.Focus();
         }
@@ -83,48 +84,60 @@ namespace HospitalManagementSystem
 
         private void btn_signin_Click(object sender, EventArgs e)
         {
-            if (checkUsername(cmb_loginas.SelectedItem.ToString(),
+            if (cmb_loginas.SelectedIndex >= 0 && cmb_loginas.SelectedIndex < 3)
+                if (checkUsername(cmb_loginas.SelectedItem.ToString(),
                 txt_username.Text)
                 && checkPassword(cmb_loginas.SelectedItem.ToString(),
                 txt_username.Text, txt_password.Text))
-            {
-                if (cmb_loginas.SelectedItem.ToString() == "Doctor")
                 {
-                    doctorForm Doctor_Form = new doctorForm(this, txt_username.Text);
-                    
-                    Doctor_Form.Show();
-                }
-                 if (cmb_loginas.SelectedItem.ToString() == "Patient")
-                {
-                    // Patient pat = new Patient(this, txt_username.Text);
-                    PatientOpions a = new PatientOpions();
-                    
-                    a.Show();
-                }
-                 if (cmb_loginas.SelectedItem.ToString() == "Nurse")
-                {
-                    NurseOptions b = new NurseOptions();
-                    b.Show();
-                  //  this.Close();
-                   
+                    if (cmb_loginas.SelectedItem.ToString() == "Doctor")
+                    {
+                        doctorForm Doctor_Form = new doctorForm(this, txt_username.Text);
 
+                        Doctor_Form.Show();
+                    }
+                    if (cmb_loginas.SelectedItem.ToString() == "Patient")
+                    {
+                        // Patient pat = new Patient(this, txt_username.Text);
+                        PatientOpions a = new PatientOpions();
+
+                        a.Show();
+                    }
+                    if (cmb_loginas.SelectedItem.ToString() == "Nurse")
+                    {
+                        NurseOptions b = new NurseOptions();
+                        b.Show();
+                        //  this.Close();
+
+
+                    }
+                }
+                else if (!checkUsername(cmb_loginas.SelectedItem.ToString(),
+                    txt_username.Text))
+                    MessageBox.Show("Username does not exist", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show("Password incorrect", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                if (txt_username.Text == "pola" && txt_password.Text == "pola")
+                {
+                    AdminOptions adminForm = new AdminOptions();
+                    adminForm.Show();
                 }
             }
-            else if (!checkUsername(cmb_loginas.SelectedItem.ToString(),
-                txt_username.Text))
-                MessageBox.Show("Username does not exist", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                MessageBox.Show("Password incorrect", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            txt_username.Text = "";
+            txt_password.Text = "";
         }
 
         private void txt_username_TextChanged(object sender, EventArgs e)
         {
-            if (checkUsername(cmb_loginas.SelectedItem.ToString(), txt_username.Text))
-                txt_username.ForeColor = Color.GreenYellow;
-            else
-                txt_username.ForeColor = Color.Red;
+            if (cmb_loginas.SelectedIndex >= 0 && cmb_loginas.SelectedIndex < 3)
+                if (checkUsername(cmb_loginas.SelectedItem.ToString(), txt_username.Text))
+                    txt_username.ForeColor = Color.GreenYellow;
+                else
+                    txt_username.ForeColor = Color.Red;
         }
 
         private void tableLayoutPanel2_MouseDown(object sender, MouseEventArgs e)

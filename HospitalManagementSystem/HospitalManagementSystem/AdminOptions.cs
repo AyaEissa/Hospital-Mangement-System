@@ -25,7 +25,7 @@ namespace HospitalManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Doctor d = new Doctor();
+            Doctor d = new Doctor(true);
             d.Show();
         }
 

@@ -29,7 +29,7 @@ namespace HospitalManagementSystem
             cmd.CommandText = "Update Nurse set username=:username , Password_=:Password_,Fname=:Fname,Lname=:Lname,Mobilenumber=:Mobilenumber where Username=:Username";
 
             cmd.Parameters.Add("Username", comboBox1.SelectedItem.ToString());
-            cmd.Parameters.Add("Password_", textBox3.Text);
+            cmd.Parameters.Add("Password_", Cryptography.Encrypt(textBox3.Text));
             cmd.Parameters.Add("Fname", textBox1.Text);
             cmd.Parameters.Add("Lname", textBox2.Text);
             cmd.Parameters.Add("Mobile_number", textBox4.Text);
@@ -51,7 +51,7 @@ namespace HospitalManagementSystem
             OracleDataReader dr = c.ExecuteReader();
             if (dr.Read())
             {
-                textBox3.Text = dr[1].ToString();
+                textBox3.Text = Cryptography.Decrypt(dr[1].ToString());
                 textBox1.Text = dr[2].ToString();
                 textBox2.Text = dr[3].ToString();
                 textBox4.Text = dr[4].ToString();
@@ -89,5 +89,5 @@ namespace HospitalManagementSystem
             this.Close();
         }
     }
-    }
-    
+}
+
