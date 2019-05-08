@@ -53,19 +53,19 @@ namespace HospitalManagementSystem
             saveUpdate_btn.Visible = true;
             cancelUpdate_btn.Visible = true;
 
-            fName_txt.BackColor = SystemColors.Window;
+            //fName_txt.BackColor = SystemColors.Window;
             fName_txt.BorderStyle = BorderStyle.Fixed3D;
 
-            lName_txt.BackColor = SystemColors.Window;
+            //lName_txt.BackColor = SystemColors.Window;
             lName_txt.BorderStyle = BorderStyle.Fixed3D;
 
-            password_txt.BackColor = SystemColors.Window;
+            //password_txt.BackColor = SystemColors.Window;
             password_txt.BorderStyle = BorderStyle.Fixed3D;
 
-            department_txt.BackColor = SystemColors.Window;
+            //department_txt.BackColor = SystemColors.Window;
             department_txt.BorderStyle = BorderStyle.Fixed3D;
 
-            mobileNum_txt.BackColor = SystemColors.Window;
+            //mobileNum_txt.BackColor = SystemColors.Window;
             mobileNum_txt.BorderStyle = BorderStyle.Fixed3D;
         }
 
@@ -79,20 +79,20 @@ namespace HospitalManagementSystem
             saveUpdate_btn.Visible = false;
             cancelUpdate_btn.Visible = false;
 
-            fName_txt.BackColor = SystemColors.Control;
-            fName_txt.BorderStyle = BorderStyle.None;
+            //fName_txt.BackColor = SystemColors.Control;
+            fName_txt.BorderStyle = BorderStyle.FixedSingle;
 
-            lName_txt.BackColor = SystemColors.Control;
-            lName_txt.BorderStyle = BorderStyle.None;
+            //lName_txt.BackColor = SystemColors.Control;
+            lName_txt.BorderStyle = BorderStyle.FixedSingle;
 
-            password_txt.BackColor = SystemColors.Control;
-            password_txt.BorderStyle = BorderStyle.None;
+            //password_txt.BackColor = SystemColors.Control;
+            password_txt.BorderStyle = BorderStyle.FixedSingle;
 
-            department_txt.BackColor = SystemColors.Control;
-            department_txt.BorderStyle = BorderStyle.None;
+            //department_txt.BackColor = SystemColors.Control;
+            department_txt.BorderStyle = BorderStyle.FixedSingle;
 
-            mobileNum_txt.BackColor = SystemColors.Control;
-            mobileNum_txt.BorderStyle = BorderStyle.None;
+            //mobileNum_txt.BackColor = SystemColors.Control;
+            mobileNum_txt.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void cancelUpdate_btn_Click(object sender, EventArgs e)
@@ -100,22 +100,20 @@ namespace HospitalManagementSystem
             saveUpdate_btn.Visible = false;
             cancelUpdate_btn.Visible = false;
 
-            fName_txt.BackColor = SystemColors.Control;
-            fName_txt.BorderStyle = BorderStyle.None;
+            //fName_txt.BackColor = SystemColors.Control;
+            fName_txt.BorderStyle = BorderStyle.FixedSingle;
 
-            lName_txt.BackColor = SystemColors.Control;
-            lName_txt.BorderStyle = BorderStyle.None;
+            //lName_txt.BackColor = SystemColors.Control;
+            lName_txt.BorderStyle = BorderStyle.FixedSingle;
 
-            password_txt.BackColor = SystemColors.Control;
-            password_txt.BorderStyle = BorderStyle.None;
+            //password_txt.BackColor = SystemColors.Control;
+            password_txt.BorderStyle = BorderStyle.FixedSingle;
 
-            department_txt.BackColor = SystemColors.Control;
-            department_txt.BorderStyle = BorderStyle.None;
+            //department_txt.BackColor = SystemColors.Control;
+            department_txt.BorderStyle = BorderStyle.FixedSingle;
 
-            mobileNum_txt.BackColor = SystemColors.Control;
-            mobileNum_txt.BorderStyle = BorderStyle.None;
-
-            password_txt.Text = password_txt.Text;
+            //mobileNum_txt.BackColor = SystemColors.Control;
+            mobileNum_txt.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void saveHealth_btn_Click(object sender, EventArgs e)
