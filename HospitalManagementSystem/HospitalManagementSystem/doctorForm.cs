@@ -268,5 +268,10 @@ namespace HospitalManagementSystem
             frm_doctorSchedule scheduleForm = new frm_doctorSchedule(doctorUserName);
             scheduleForm.Show();
         }
+
+        private void userName_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
